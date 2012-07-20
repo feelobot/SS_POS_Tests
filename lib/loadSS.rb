@@ -3,10 +3,15 @@ class LoadSS
 	#///////////////////////////////////////////////////////////
 	def loadDriver
 		@driver = Selenium::WebDriver.for :chrome
-		@driver.navigate.to "http://rogerspos:be81f6@173.242.122.14"
 		@driver.manage.timeouts.implicit_wait = 3#Seconds
-		@wait = Selenium::WebDriver::Wait.new(:timeout => 5) # seconds
+		@wait = Selenium::WebDriver::Wait.new(:timeout => 30) # seconds
 		
+	end
+	#of loadDriver///////////////////////////////////////////////
+	
+	#///////////////////////////////////////////////////////////
+	def gotoSS
+		@driver.navigate.to "http://rogerspos:be81f6@173.242.122.14"
 	end
 	#of loadDriver///////////////////////////////////////////////
 
@@ -17,21 +22,13 @@ class LoadSS
 	#of killDriver /////////////////////////////////////////////
 	
 	#///////////////////////////////////////////////////////////
-	def element_present?(how, what)
-    @driver.find_element(how, what)
-    true
- 		 rescue Selenium::WebDriver::Error::NoSuchElementError
-    false
-  end
-  #///////////////////////////////////////////////////////////
-  
-  #///////////////////////////////////////////////////////////
-  def verify(&blk)
-    yield
-  rescue ExpectationNotMetError => ex
-    @verification_errors << ex
-  end
-	#///////////////////////////////////////////////////////////
+	def reloadDB
+		@driver.navigate.to "http://rogerspos:be81f6@173.242.122.14/reloadBase.php"
+		@wait.until { @driver.find_element(:id, 'results').text =~ /^[\s\S]*Done![\s\S]*$/ }
+		@driver.navigate.to "http://rogerspos:be81f6@173.242.122.14"
+	end
+	#of killDriver /////////////////////////////////////////////
+	
 	
 	#///////////////////////////////////////////////////////////
 	def setupTab

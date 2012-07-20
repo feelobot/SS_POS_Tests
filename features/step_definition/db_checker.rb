@@ -7,7 +7,7 @@ require 'loadSS'
 Before do
 	@load = LoadSS.new
 	@load.loadDriver
-
+	@load.gotoSS
 end
 
 After do
@@ -16,7 +16,7 @@ end
 
 
 Given /^The Database is New and Untouched$/ do
-	
+	#@load.reloadDB
 end
 
 When /^I run dbchecker utility$/ do
