@@ -2,10 +2,12 @@ class LoadSS
 	
 	#///////////////////////////////////////////////////////////
 	def loadDriver
+		@headless = Headless.new
+		@headless.start
+		#@driver = Selenium::WebDriver.for :chrome
 		@driver = Selenium::WebDriver.for :chrome
 		@driver.manage.timeouts.implicit_wait = 3#Seconds
-		@wait = Selenium::WebDriver::Wait.new(:timeout => 30) # seconds
-		
+		@wait = Selenium::WebDriver::Wait.new(:timeout => 60) # seconds
 	end
 	#of loadDriver///////////////////////////////////////////////
 	
@@ -17,7 +19,8 @@ class LoadSS
 
 	#///////////////////////////////////////////////////////////
 	def killDriver
-		@driver.quit
+		#@driver.quit
+		@headless.destroy
 	end
 	#of killDriver /////////////////////////////////////////////
 	
@@ -25,7 +28,7 @@ class LoadSS
 	def reloadDB
 		@driver.navigate.to "http://rogerspos:be81f6@173.242.122.14/reloadBase.php"
 		@wait.until { @driver.find_element(:id, 'results').text =~ /^[\s\S]*Done![\s\S]*$/ }
-		@driver.navigate.to "http://rogerspos:be81f6@173.242.122.14"
+		#@driver.save_screenshot("screenshots/db_reloaded.png")
 	end
 	#of killDriver /////////////////////////////////////////////
 	
@@ -61,6 +64,7 @@ class LoadSS
 			#///////////////////////////////////////////////////////////
 			def waitForResults
 				@wait.until { @driver.find_element(:xpath, "//b[2]").text == "Database check completed"}
+				#@driver.save_screenshot("screenshots/db_checker_results1.png")
 			end
 			#of waitForResults /////////////////////////////////////////////
 			
@@ -78,6 +82,7 @@ class LoadSS
 				@wait.until { @driver.find_element(:xpath, "//li").text == "0 Table changes made" }
 				@wait.until { @driver.find_element(:xpath, '//li[2]').text == "0 Field changes made" }
 				@wait.until { @driver.find_element(:xpath, "//li[3]").text == "0 Index changes made" }
+				#@driver.save_screenshot("screenshots/db_checker_results2.png")
 			end
 			#of runDBChecker /////////////////////////////////////////////
 			

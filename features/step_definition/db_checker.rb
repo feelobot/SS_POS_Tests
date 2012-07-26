@@ -9,9 +9,9 @@ Before do
 	@load.loadDriver
 end
 
-#After do
-	#@load.killDriver	
-#end
+After do
+	@load.killDriver	
+end
 
 
 Given /^The Database is New and Untouched$/ do
@@ -25,7 +25,6 @@ end
 
 When /^I run dbchecker again$/ do
 	@load.runDBChecker
-	@load.dbCheckerResults
 end
 
 Then /^there should be no index changes$/ do 
