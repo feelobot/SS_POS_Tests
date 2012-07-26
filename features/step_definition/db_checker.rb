@@ -4,15 +4,15 @@ require 'selenium-webdriver'
 $:.unshift(File.dirname(__FILE__) + '/../../lib')
 require 'loadSS'
 
-Before do
-	@load = LoadSS.new
-	@load.loadDriver
-	@load.gotoSS
-end
+#Before do
+	#@load = LoadSS.new
+	#@load.loadDriver
+	#@load.gotoSS
+#end
 
-After do
-	@load.killDriver	
-end
+#After do
+	#@load.killDriver	
+#end
 
 
 Given /^The Database is New and Untouched$/ do

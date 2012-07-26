@@ -4,6 +4,7 @@ require 'selenium-webdriver'
 require 'capybara/cucumber'
 Capybara.default_driver = :selenium
 require 'timeout'
+
 require 'headless'
 headless = Headless.new
 at_exit do
