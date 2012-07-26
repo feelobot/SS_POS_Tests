@@ -6,7 +6,7 @@ require 'loadSS'
 
 Before do
 	@load = LoadSS.new
-	#@load.loadDriver
+	@load.loadDriver
 end
 
 #After do
