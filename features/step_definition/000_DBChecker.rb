@@ -2,10 +2,6 @@ Before do
 	@load = LoadSS.new
 	@load.loadDriver
 	@load.dbSnapshots('000_DBChecker\Before')
-	@tab = Tabs.new
-	@bttn = Bttns.new
-	@utility = Utilities.new
-	
 end
 
 After do
@@ -16,7 +12,7 @@ end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 Given /^The Database is New and Untouched$/ do
 	@load.reloadDB
-	@load.takeScreenShot("000_DBChecker_Start")
+	@load.takeScreenShot("000_DBChecker/Given")
 	@load.gotoSS
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,10 +21,12 @@ end
 # STEP 1
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 When /^I run dbchecker utility$/ do
-	@tab.setup
-	@bttn.utilities
-	@utility.dbChecker
-	@load.takeScreenShot("000_DBChecker_Step1")
+	@load.tab("Setup")
+	@load.takeScreenShot("000_DBChecker/Step1-1")
+	$bttn.setupBttns("Utilities")
+	@load.takeScreenShot("000_DBChecker/Step1-2")
+	$utility.dbChecker
+	@load.takeScreenShot("000_DBChecker/Step1-3")
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -36,11 +34,12 @@ end
 # STEP 2
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 When /^I run dbchecker again$/ do
-	@tab.setup
-	@bttn.utilities
-	@utility.dbChecker
-	$wait.until { $driver.find_element(:xpath, "//b[2]").text == "Database check completed"}
-	@load.takeScreenShot("000_DBChecker_Step2")
+	@load.tab("Setup")
+	@load.takeScreenShot("000_DBChecker/Step2-1")
+	$bttn.setupBttns("Utilities")
+	@load.takeScreenShot("000_DBChecker/Step2-2")
+	$utility.dbChecker
+	@load.takeScreenShot("000_DBChecker/Step2-3")
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -51,7 +50,7 @@ Then /^there should be no index changes$/ do
 	$wait.until { $driver.find_element(:xpath, "//li").text == "0 Table changes made" }
 	$wait.until { $driver.find_element(:xpath, '//li[2]').text == "0 Field changes made" }
 	$wait.until { $driver.find_element(:xpath, "//li[3]").text == "0 Index changes made" }
-	@load.takeScreenShot("000_DBChecker_Step3")
+	@load.takeScreenShot("000_DBChecker/Step3")
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 

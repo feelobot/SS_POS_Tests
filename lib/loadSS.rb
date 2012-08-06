@@ -1,5 +1,5 @@
 class LoadSS
-	
+	$baseURL= "http://rogerspos:be81f6@173.242.122.14/"
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
 	# CONFIGURE WEB DRIVER SETUP
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -7,6 +7,8 @@ class LoadSS
 		$driver = Selenium::WebDriver.for :chrome
 		$driver.manage.timeouts.implicit_wait = 3#Seconds
 		$wait = Selenium::WebDriver::Wait.new(:timeout => 90) # seconds
+		$bttn = Bttns.new
+	 $utility = Utilities.new
 	end#of loadDriver
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
 	
@@ -14,7 +16,7 @@ class LoadSS
 	# LOAD SUPERSALON WEBSITE & LOGIN
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
 	def gotoSS
-		$driver.navigate.to "http://rogerspos:be81f6@173.242.122.14"
+		$driver.navigate.to $baseURL
 	end
 	#of loadDriver
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +25,7 @@ class LoadSS
 	# RELOAD DATABASE TO BLANK STATE
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
 	def reloadDB
-		$driver.navigate.to "http://rogerspos:be81f6@173.242.122.14/reloadBase.php"
+		$driver.navigate.to($baseURL + "reloadBase.php")
 		$wait.until { $driver.find_element(:id, 'results').text =~ /^[\s\S]*Done![\s\S]*$/ }
 	end# of reloadDB
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,8 +35,8 @@ class LoadSS
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
 	def dbSnapshots (dirname)
 		if ENV['SNAPSHOTS'] == 'true'
-			$driver.navigate.to("http://rogerspos:be81f6@173.242.122.14/exportDB.php?dirname=" + dirname)
-			$wait.until { $driver.find_element(:id, 'results').text == "Done"}
+			$driver.navigate.to($baseURL + "exportDB.php?dirname=" + dirname)
+			$wait.until { $driver.find_element(:id, 'results').text =~ /^[\s\S]*Done![\s\S]*$/ }
 		end
 	end# of reloadDB
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -43,7 +45,30 @@ class LoadSS
 	# SCREEN SHOT FUNCION
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
 	def takeScreenShot (fileName)
-		$driver.save_screenshot("screenshots/" + fileName + Time.now.strftime("%m%d%Y-%I%M%S") + ".png")
+		$driver.save_screenshot("screenshots/" + fileName + ".png")
 	end #of takeScreenShot
+	#///////////////////////////////////////////////////////////////////////////////////////////////////
+
+	#///////////////////////////////////////////////////////////////////////////////////////////////////
+	# SELECT TABS
+	#///////////////////////////////////////////////////////////////////////////////////////////////////
+	def tab (tabName)
+		tabNames = {
+						"Sales" => "a0",  
+						"Appointments"=> "a1", 
+						"Timeclock"=> "a2", 
+						"Scheduler"=> "a3", 
+						"Reports"=> "a4", 
+						"Manager"=> "a5", 
+						"Setup"=> "a6", 
+						"Messages"=> "a7", 
+						"Help" =>"a8"
+					}
+		idPath = tabNames.fetch(tabName)
+		$driver.switch_to.default_content
+		$driver.switch_to.frame "menu"
+		$element = $driver.find_element(:id, idPath)
+		$element.click
+	end #of sales
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
 end

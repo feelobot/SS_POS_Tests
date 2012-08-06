@@ -1,0 +1,46 @@
+Feature: Database checker utility
+  In Order to verify the checker works
+  As a database cleanup utility
+  I want to show 0 changes made the second pass
+
+  Background: [90m                              # features/000_DBChecker.feature:6[0m
+    [32mGiven The Database is New and Untouched[90m # features/step_definition/000_DBChecker.rb:13[0m[0m
+
+  Scenario: [90m                                # features/000_DBChecker.feature:9[0m
+    [32mWhen I run dbchecker utility[90m            # features/step_definition/000_DBChecker.rb:23[0m[0m
+    [32mAnd I run dbchecker again[90m               # features/step_definition/000_DBChecker.rb:36[0m[0m
+    [32mThen there should be no index changes[90m   # features/step_definition/000_DBChecker.rb:49[0m[0m
+
+Feature: Open Till
+  In Order to count and the opening till
+  As stylist
+  I want to show the values add up correctly and save properly
+
+  Background: [90m                               # features/001_Open.feature:6[0m
+    [33mGiven The till has not been opened prior[90m # features/step_definition/001_Open.rb:1[0m[0m
+[33m      TODO (Cucumber::Pending)[0m
+[33m      ./features/step_definition/001_Open.rb:2:in `/^The till has not been opened prior$/'[0m
+[33m      features/001_Open.feature:7:in `Given The till has not been opened prior'[0m
+
+  Scenario: [90m                                        # features/001_Open.feature:9[0m
+    [33mWhen I select the 'Manager' tab[90m                 # features/001_Open.feature:10[0m[0m
+    [33mAnd I select the 'Opening' button[90m               # features/001_Open.feature:11[0m[0m
+    [36mAnd I enter amounts in all the fields[90m           # features/step_definition/001_Open.rb:13[0m[0m
+    [36mThen the counter should tally up all the values[90m # features/step_definition/001_Open.rb:17[0m[0m
+    [36mAnd when I hit save[90m                             # features/step_definition/001_Open.rb:21[0m[0m
+    [36mThen the opening till should be complete[90m        # features/step_definition/001_Open.rb:25[0m[0m
+
+2 scenarios ([33m1 pending[0m, [32m1 passed[0m)
+11 steps ([36m4 skipped[0m, [33m2 undefined[0m, [33m1 pending[0m, [32m4 passed[0m)
+1m29.507s
+[33m[0m
+[33mYou can implement step definitions for undefined steps with these snippets:[0m
+[33m[0m
+[33mWhen /^I select the 'Manager' tab$/ do[0m
+[33m  pending # express the regexp above with the code you wish you had[0m
+[33mend[0m
+[33m[0m
+[33mWhen /^I select the 'Opening' button$/ do[0m
+[33m  pending # express the regexp above with the code you wish you had[0m
+[33mend[0m
+
