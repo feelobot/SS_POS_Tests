@@ -38,11 +38,17 @@ class Opening
 		end #of loop 
 	end #of setCashCountValues
 	def push(button)
-		buttons = { "Save" => '//*[@id="command_button"]', 
-					"Open Till" => '',
+		self.selectManagerFrame
+		buttons = { "Save" => '(//button[@id="command_button"])[3]', 
+					"Open Till" => ''
 				}
 		path = buttons.fetch(button)
+		element = $driver.find_element(:xpath, path)
+		$wait.until {element.displayed?}
+		element.click
 	end
+
+>>>>>>> dc22e7329c0efe0020da6436dc8f0afd82ec000b
 	def getValues(button)
 		buttons = { "Total Cash Count" => '/html/body/table/tbody/tr[2]/td[1]/form/table/tbody/tr[15]/td[2]/input', 
 					"Counted Till" => '//*[@id="counted_till"]',

@@ -1,37 +1,28 @@
 Before do
-  $testname = "001_Open"
-	$ss.dbSnapshots($testname + '\Before')
+  require 'helpers/timeclock'
+  @manager = Timeclock.new
+  $ss.dbSnapshots(File.basename(__FILE__,".rb") + '\Before')
 end
 
 After do
-	$ss.dbSnapshots($testname + '\After')
+  $ss.dbSnapshots(File.basename(__FILE__,".rb") + '\After')
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
-# BACKGROUND
+# STEP 1
 #///////////////////////////////////////////////////////////////////////////////////////////////////
-Given /^No one has clocked in for the day$/ do
-  pending
-end
-#///////////////////////////////////////////////////////////////////////////////////////////////////
-# STEPS
-#///////////////////////////////////////////////////////////////////////////////////////////////////
-When /^I select the 'Sample Manager'$/ do
-  #$ss.nav("Timeclock")
-  #$ss.takeScreenShot('Step1a')
-  #$ss.subNav("Opening")
-  #$ss.takeScreenShot('Step1b')
-  #@manager.checkOpening("Incomplete")
-  pending
-end
 
+Given /^No one has clocked in for the day$/ do
+  pending # express the regexp above with the code you wish you had
+end
+When /^I select the 'Sample Manager'$/ do
+  pending # express the regexp above with the code you wish you had
+end
 When /^I clock in as 'Stylist'$/ do
   pending # express the regexp above with the code you wish you had
 end
-
 Then /^the current time should show$/ do
   pending # express the regexp above with the code you wish you had
 end
-
 Then /^'Sample Manager' should be able to ringout sales$/ do
   pending # express the regexp above with the code you wish you had
 end
