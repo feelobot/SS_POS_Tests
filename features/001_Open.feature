@@ -42,4 +42,4 @@ Scenario:
 	And the "Expected Till" should be "100.00"
 	And the "Difference" should be "150.00"
 	When I hit "Save" Opening Till Count
-	Then the status should change to "Complete"
+	Then the status should change to "Completed"

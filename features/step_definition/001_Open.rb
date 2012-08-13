@@ -1,5 +1,5 @@
 Before do
-  $testname = "001_Open"
+  @testname = "001_Open"
   require 'helpers/manager/opening'
   @manager = Opening.new
 	$ss.dbSnapshots($testname + '\Before')
@@ -36,6 +36,7 @@ end
 
 Then /^the "(.*?)" should be "(.*?)"$/ do |arg1, arg2|
   @manager.getValues(arg1) == arg2
+  $ss.takeScreenShot('Step3')
 end
 
 #///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -43,8 +44,10 @@ end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 When /^I hit "(.*?)" Opening Till Count$/ do |arg1|
   @manager.push(arg1)
+  $ss.takeScreenShot('Step4a')
 end
 
 Then /^the status should change to "(.*?)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+  @manager.checkOpening(arg1)
+  $ss.takeScreenShot('Step4b')
 end
