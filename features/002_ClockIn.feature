@@ -4,11 +4,13 @@ Feature: Clock In
 	I want to show the times save and update correctly
 
 Background:
-	Given No one has clocked in for the day
+	Given none of the employees are clocked in
 	
 Scenario:
-	When I select the 'Sample Manager'
-	And I clock in as 'Stylist'
-	Then the current time should show
-	And 'Sample Manager' should be able to ringout sales
+	When I type employee ID "99" 
+    Then the "Sample Manager" timecard should appear
+    And if I click "Sample Manager" button instead 
+    Then the "Sample Manager" timecard should appear
+	When clock in as 'Stylist' button is pushed
+	Then "Current Time" and "Clock Time" should match
 	

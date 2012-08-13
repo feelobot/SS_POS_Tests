@@ -34,7 +34,7 @@ Then /^I should get the following results$/ do |table|
   @manager.verifyCashCountValues(results)
 end
 
-Then /^the "(.*?)" should be "(.*?)"$/ do |arg1, arg2|
+And /^the "(.*?)" should be "(.*?)"$/ do |arg1, arg2|
   @manager.getValues(arg1) == arg2
 end
 

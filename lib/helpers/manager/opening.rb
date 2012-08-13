@@ -43,7 +43,7 @@ class Opening
 				}
 		path = buttons.fetch(button)
 	end
-	def getValues(name)
+	def getValues(button)
 		buttons = { "Total Cash Count" => '/html/body/table/tbody/tr[2]/td[1]/form/table/tbody/tr[15]/td[2]/input', 
 					"Counted Till" => '//*[@id="counted_till"]',
 					"Expected Till" => '/html/body/table/tbody/tr[2]/td[2]/form/table/tbody/tr[3]/td[2]/input',
