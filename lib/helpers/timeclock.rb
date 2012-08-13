@@ -1,9 +1,9 @@
-class Utilities
+class Timeclock
 
-	def run(name)
+	def employee(name)
 		$ss.nav("Setup")
 		$ss.subNav("Utilities")
-		utilities = {
+		employees = {
 						"Upload Options" => '//button[1]', 
 						"Import Data" => '//button[2]', 
 						"Fix Inventory Count" => '//button[3]', 
@@ -23,7 +23,7 @@ class Utilities
 						"Unify System Identities" => '//button[17]', 
 						"Apply All Service Catagories" => '//button[18]'
 					}
-		path = utilities.fetch(name)
+		path = employees.fetch(employee)
 		$driver.switch_to.default_content
 		$driver.switch_to.frame 'content'
 		$driver.switch_to.frame 'setupcontent'
