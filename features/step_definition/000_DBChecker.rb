@@ -1,56 +1,49 @@
+
 Before do
-	@load = LoadSS.new
-	@load.loadDriver
-	@load.dbSnapshots('000_DBChecker\Before')
+	$testname = "000_DBChecker"
+	require 'helpers/setupHelper'
+	@setup = SetupHelper.new
+	$ss = Load.new	
+	$ss.loadDriver
+	$ss.dbSnapshots($testname + 'Before')
 end
 
 After do
-	@load.dbSnapshots('000_DBChecker\After')
+	$ss.dbSnapshots($testname + 'After')
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 # BACKGROUND
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 Given /^The Database is New and Untouched$/ do
-	@load.reloadDB
-	@load.takeScreenShot("000_DBChecker/Given")
-	@load.gotoSS
+	$ss.reloadDB
+	$ss.takeScreenShot("Given")
+	$ss.home
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 # STEP 1
 #///////////////////////////////////////////////////////////////////////////////////////////////////
-When /^I run dbchecker utility$/ do
-	@load.tab("Setup")
-	@load.takeScreenShot("000_DBChecker/Step1-1")
-	$bttn.setupBttns("Utilities")
-	@load.takeScreenShot("000_DBChecker/Step1-2")
-	$utility.dbChecker
-	@load.takeScreenShot("000_DBChecker/Step1-3")
+When /^I run the "(.*?)" utility (\d+) times$/ do |arg1, arg2|
+	count=1
+	Integer(arg2).times do
+		@setup.runUtility("DBChecker")
+		$ss.takeScreenShot("/Step" + count.to_s + "a")
+		$wait.until { $driver.find_element(:xpath, "//b[2]").text == "Database check completed"}
+		$ss.takeScreenShot("Step" + count.to_s + "b")
+		count+=1
+	end
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
 #///////////////////////////////////////////////////////////////////////////////////////////////////
-# STEP 2
-#///////////////////////////////////////////////////////////////////////////////////////////////////
-When /^I run dbchecker again$/ do
-	@load.tab("Setup")
-	@load.takeScreenShot("000_DBChecker/Step2-1")
-	$bttn.setupBttns("Utilities")
-	@load.takeScreenShot("000_DBChecker/Step2-2")
-	$utility.dbChecker
-	@load.takeScreenShot("000_DBChecker/Step2-3")
-end
-#///////////////////////////////////////////////////////////////////////////////////////////////////
-
-#///////////////////////////////////////////////////////////////////////////////////////////////////
-#Step 3
+#Step 2
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 Then /^there should be no index changes$/ do 
 	$wait.until { $driver.find_element(:xpath, "//li").text == "0 Table changes made" }
 	$wait.until { $driver.find_element(:xpath, '//li[2]').text == "0 Field changes made" }
 	$wait.until { $driver.find_element(:xpath, "//li[3]").text == "0 Index changes made" }
-	@load.takeScreenShot("000_DBChecker/Step3")
+	$ss.takeScreenShot("Step3")
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 

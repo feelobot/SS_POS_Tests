@@ -1,6 +1,6 @@
-class Utilities
+class SetupHelper
 
-	def run(name)
+	def runUtility(name)
 		$ss.nav("Setup")
 		$ss.subNav("Utilities")
 		utilities = {

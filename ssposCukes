@@ -1,0 +1,11 @@
+#!/bin/bash
+cd /var/www/screenshots
+find . -type f -iname \*.png -delete
+cd /home/code/SS_POS_Tests
+HEADLESS='true' cucumber -f rerun -o cukeResults.txt  -f html -o /var/www/cukeResults.html
+zip -r -9 --exclude=*.zip* /home/code/SS_POS_Tests/screenshots/lastrun.zip /home/code/SS_POS_Tests/screenshots 
+ruby mailResults.rb
+mv /home/code/SS_POS_Tests/screenshots/lastrun.zip /home/code/SS_POS_Tests/screenshots/`date +%Y%m%d-%T`.zip
+cp -r /home/code/SS_POS_Tests/screenshots/* /var/www/screenshots
+cd /home/code/SS_POS_Tests/screenshots
+find . -type f -iname \*.png -delete

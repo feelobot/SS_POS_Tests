@@ -1,27 +1,50 @@
-Given /^The till has not been opened prior$/ do
-  pending # express the regexp above with the code you wish you had
+Before do
+  $testname = "001_Open"
+  require 'helpers/manager/opening'
+  @manager = Opening.new
+	$ss.dbSnapshots($testname + '\Before')
 end
 
-When /^I select the "(.*?)" tab$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+After do
+	$ss.dbSnapshots($testname + '\After')
+end
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+# STEP 1
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+Given /^the status of the till is "(.*?)"$/ do |arg1|
+  $ss.nav("Manager")
+  $ss.takeScreenShot('Step1a')
+  $ss.subNav("Opening")
+  $ss.takeScreenShot('Step1b')
+  @manager.checkOpening(arg1)
+end
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+# STEP 2
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+When /^I store the following into cash count helper$/ do |table|
+  values = table.raw
+  @manager.setCashCountValues(values)
+  $ss.takeScreenShot('Step2')
+end
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+# STEP 3
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+Then /^I should get the following results$/ do |table|
+  results = table.raw
+  @manager.verifyCashCountValues(results)
 end
 
-When /^I select the "(.*?)" button$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then /^the "(.*?)" should be "(.*?)"$/ do |arg1, arg2|
+  @manager.getValues(arg1) == arg2
 end
 
-When /^I enter amounts in all the fields$/ do
-  pending # express the regexp above with the code you wish you had
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+# STEP 4
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+When /^I hit "(.*?)" Opening Till Count$/ do |arg1|
+  @manager.push(arg1)
 end
 
-Then /^the counter should tally up all the values$/ do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^when I hit save$/ do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^the opening till should be complete$/ do
+Then /^the status should change to "(.*?)"$/ do |arg1|
   pending # express the regexp above with the code you wish you had
 end

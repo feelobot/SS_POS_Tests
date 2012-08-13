@@ -1,0 +1,7 @@
+source "http://rubygems.org"
+gem "capybara"
+gem "rspec"
+gem "selenium-webdriver"
+gem "headless"
+gem "cucumber"
+gem "chromedriver-helper"	
