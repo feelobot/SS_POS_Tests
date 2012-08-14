@@ -9,7 +9,7 @@ Background:
 Scenario:
 	When I type employee ID "99" 
     Then the "Sample Manager" timecard should appear
-    And if I click "Sample Manager" button instead 
+    And if I click "Sample Manager" button
     Then the "Sample Manager" timecard should appear
 	When clock in as 'Stylist' button is pushed
 	Then "Current Time" and "Clock Time" should match
