@@ -7,17 +7,18 @@ class Reports
 						#DISCOUNTS
 						#GIFTS
 						#PAYROLL
-						"Employee List" => "(//button[@type='button'])[59]",
-						"Employee Points" => "(//button[@type='button'])[60]",
-						"Schedule Forcasting" => "(//button[@type='button'])[61]",
-						"Schedule Forcasting" => "(//button[@type='button'])[62]",
-						"Timecard" => "(//button[@type='button'])[63]",
-						"" => "",
-						"" => "",
-						"" => "",
-						"" => "",
-						"" => "",
-						"" => "",
+						"Payroll" => '//*[@id="payroll"]'
+							"Employee List" => "(//button[@type='button'])[59]",
+							"Employee Points" => "(//button[@type='button'])[60]",
+							"Schedule Forcasting" => "(//button[@type='button'])[61]",
+							"Schedule Forcasting" => "(//button[@type='button'])[62]",
+							"Timecard" => "(//button[@type='button'])[63]",
+							"Labor and Sales" => "",
+							"Time Clock Audit" => "",
+							"Annnual Bonus" => "",
+							"Employee Contact List" => "",
+							"Tip Detail" => "",
+							"Tip Adjust" => "",
 						#CUSTOMERS
 						"" => "",
 						"" => "",

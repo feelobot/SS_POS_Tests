@@ -15,7 +15,7 @@ end
 
 Given /^none of the employees are clocked in$/ do
   $ss.nav("Reports")
-  $ss.subNav("Payroll")
+  @reports.load("Payroll")
   @reports.load('Timecard')
 end
 
