@@ -14,8 +14,8 @@ Given /^the status of the till is "(.*?)"$/ do |arg1|
   $ss.nav("Manager")
   $ss.takeScreenShot(File.basename(__FILE__,".rb"),'Step1a')
   $ss.subNav("Opening")
-  $ss.takeScreenShot(File.basename(__FILE__,".rb"),'Step1b')
   @manager.checkOpening(arg1)
+  $ss.takeScreenShot(File.basename(__FILE__,".rb"),'Step1b')
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 # STEP 2

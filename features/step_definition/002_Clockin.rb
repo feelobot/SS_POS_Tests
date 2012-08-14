@@ -1,6 +1,8 @@
 Before do
   require 'helpers/timeclock'
-  @manager = Timeclock.new
+  require 'helpers/reports'
+  @time = Timeclock.new
+  @report = Reports.new
   $ss.dbSnapshots(File.basename(__FILE__,".rb") + '\Before')
 end
 
@@ -11,18 +13,29 @@ end
 # STEP 1
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
-Given /^No one has clocked in for the day$/ do
+Given /^none of the employees are clocked in$/ do
+  $ss.nav("Reports")
+  $ss.subNav("Payroll")
+  @reports.load('Timecard')
+end
+
+When /^I type employee ID "(.*?)"$/ do |arg1|
   pending # express the regexp above with the code you wish you had
 end
-When /^I select the 'Sample Manager'$/ do
+
+Then /^the "(.*?)" timecard should appear$/ do |arg1|
   pending # express the regexp above with the code you wish you had
 end
-When /^I clock in as 'Stylist'$/ do
+
+Then /^if I click "(.*?)" button$/ do |arg1|
   pending # express the regexp above with the code you wish you had
 end
-Then /^the current time should show$/ do
+
+When /^clock in as 'Stylist' button is pushed$/ do
   pending # express the regexp above with the code you wish you had
 end
-Then /^'Sample Manager' should be able to ringout sales$/ do
+
+Then /^"(.*?)" and "(.*?)" should match$/ do |arg1, arg2|
   pending # express the regexp above with the code you wish you had
 end
+

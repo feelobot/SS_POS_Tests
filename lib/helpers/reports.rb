@@ -1,4 +1,4 @@
-class Timeclock
+class Reports
 	def employee(name)
 		employees = {
 						"" => '',
