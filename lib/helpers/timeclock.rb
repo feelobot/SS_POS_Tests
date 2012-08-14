@@ -1,8 +1,8 @@
 class Timeclock
 	def employee(name)
 		employees = {
-						"" => '',
-						"" => '',
+						"Sample Manager " => '',
+						"Sample Receptionst" => '',
 						"" => '',
 						"" => ''
 					}

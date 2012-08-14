@@ -1,12 +1,84 @@
 class Reports
-	def employee(name)
-		employees = {
-						"" => '',
-						"" => '',
-						"" => '',
-						"" => ''
+	def load(report)
+		allreports = {
+						#SALES
+						#SERVICES
+						#PRODUCTS
+						#DISCOUNTS
+						#GIFTS
+						#PAYROLL
+						"Employee List" => "(//button[@type='button'])[59]",
+						"Employee Points" => "(//button[@type='button'])[60]",
+						"Schedule Forcasting" => "(//button[@type='button'])[61]",
+						"Schedule Forcasting" => "(//button[@type='button'])[62]",
+						"Timecard" => "(//button[@type='button'])[63]",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						#CUSTOMERS
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						#AUDIT
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						#MINI-REPORTS
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						#TECHNICIAN DAILY SALES
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						#TRANSACTION DETAIL
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						#TAXES
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						#RETAIL
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => "",
+						"" => ""
 					}
-		path = employees.fetch(employee)
+		path = allreports.fetch(report)
 		$driver.switch_to.default_content
 		$driver.switch_to.frame 'content'
 		$driver.switch_to.frame 'setupcontent'
