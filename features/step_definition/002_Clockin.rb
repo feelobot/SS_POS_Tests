@@ -28,15 +28,18 @@ Given /^none of the employees are clocked in$/ do
 end
 
 When /^I type employee ID "(.*?)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+  $ss.nav("Timeclock")
+  @time.searchID(arg1)
 end
 
 Then /^the "(.*?)" timecard should appear$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+  @time.checkEmployee == arg1
 end
 
 Then /^if I click "(.*?)" button$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+  $ss.nav("Timeclock")
+  @time.employee(arg1)
+  @time.checkEmployee == arg1
 end
 
 When /^clock in as 'Stylist' button is pushed$/ do
