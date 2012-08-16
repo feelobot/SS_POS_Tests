@@ -14,9 +14,17 @@ end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
 Given /^none of the employees are clocked in$/ do
+  @testname = File.basename(__FILE__,".rb")
+  $b.goto($baseURL) 
   $ss.nav("Reports")
-  @reports.load("Payroll")
-  @reports.load('Timecard')
+  @report.run("Payroll")
+  @report.run("Timecard")
+  @report.setPeriod(0)
+  @report.generate
+  results = $b.frame(:name => "content").frame(:name => "preview").div(:class => "foreground")
+  results.text.include? "No Employees found to display"
+  $ss.takeScreenShot(@testname, "Given")
+  
 end
 
 When /^I type employee ID "(.*?)"$/ do |arg1|

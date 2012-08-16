@@ -2,8 +2,6 @@
 Before do
 	require 'helpers/setupHelper'
 	@setup = SetupHelper.new
-	$ss = Load.new	
-	$ss.loadDriver
 	$ss.dbSnapshots(File.basename(__FILE__,".rb") + 'Before')
 end
 
@@ -14,9 +12,10 @@ end
 # BACKGROUND
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 Given /^The Database is New and Untouched$/ do
+	@testname = File.basename(__FILE__,".rb")
 	$ss.reloadDB
-	$ss.takeScreenShot(File.basename(__FILE__,".rb"),"Given")
-	$ss.home
+	$ss.takeScreenShot(@testname,"Given")
+	$b.goto $baseURL 
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -27,9 +26,9 @@ When /^I run the "(.*?)" utility (\d+) times$/ do |arg1, arg2|
 	count=1
 	Integer(arg2).times do
 		@setup.runUtility("DBChecker")
-		$ss.takeScreenShot(File.basename(__FILE__,".rb"),"Step" + count.to_s + "a")
-		$wait.until { $driver.find_element(:xpath, "//b[2]").text == "Database check completed"}
-		$ss.takeScreenShot(File.basename(__FILE__,".rb"),"Step" + count.to_s + "b")
+		$ss.takeScreenShot(@testname,"Step" + count.to_s + "a")
+		@setup.dBcheckerStatus
+		$ss.takeScreenShot(@testname,"Step" + count.to_s + "b")
 		count+=1
 	end
 end
@@ -39,10 +38,8 @@ end
 #Step 2
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 Then /^there should be no index changes$/ do 
-	$wait.until { $driver.find_element(:xpath, "//li").text == "0 Table changes made" }
-	$wait.until { $driver.find_element(:xpath, '//li[2]').text == "0 Field changes made" }
-	$wait.until { $driver.find_element(:xpath, "//li[3]").text == "0 Index changes made" }
-	$ss.takeScreenShot(File.basename(__FILE__,".rb"),"Step3")
+	@setup.dBcheckerResults
+	$ss.takeScreenShot(@testname,"Step3")
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
