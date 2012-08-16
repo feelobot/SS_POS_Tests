@@ -9,7 +9,7 @@ mail = Mail.new do
  	body    '<h3>Failed Features:</h3>' + File.read('cukeResults.txt') + 
  			'<p><a href="http://208.115.198.53/cukeResults.html">See Full Report</a></p>' +
  			'<p><a href="http://208.115.198.53/screenshots">See Screenshots</a></p>' +
- 			'<p><a href="http://173.242.122.14/coverage/index.php?reindex=1">Code Coverage</a></p>'
+ 			'<p><a href="http://rogerspos:be81f6@173.242.122.14/coverage/index.php">Code Coverage</a></p>'
  end
 end
 mail.deliver
