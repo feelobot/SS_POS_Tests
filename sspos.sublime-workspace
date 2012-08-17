@@ -114,6 +114,14 @@
 				"buffer_size": 1116,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "ssposCukes",
+			"settings":
+			{
+				"buffer_size": 692,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -428,8 +436,8 @@
 						"selection":
 						[
 							[
-								1202,
-								1202
+								91,
+								91
 							]
 						],
 						"settings":
@@ -442,7 +450,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 312.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -479,7 +487,7 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -570,6 +578,35 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "ssposCukes",
+					"settings":
+					{
+						"buffer_size": 692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								442,
+								442
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		}
@@ -641,6 +678,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 114.0,
+	"side_bar_width": 281.0,
 	"status_bar_visible": true
 }

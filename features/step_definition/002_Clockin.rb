@@ -42,11 +42,11 @@ Then /^if I click "(.*?)" button$/ do |arg1|
   @time.checkEmployee == arg1
 end
 
-When /^clock in as 'Stylist' button is pushed$/ do
-  pending # express the regexp above with the code you wish you had
+When /^clock in as "(.*?)" button is pushed$/ do |arg1|
+  $b.frame(:name => "content").button(:text, arg1 ).click
 end
 
 Then /^"(.*?)" and "(.*?)" should match$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+  @time.get(arg1) == @time.get(arg2)
 end
 

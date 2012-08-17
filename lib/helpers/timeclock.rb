@@ -20,6 +20,7 @@ class Timeclock
 		frame.button(:xpath, path).click
 	end #of Run
 
+
 	def checkEmployee
 		frame = $b.frame(:name => 'content')
 		Watir::Wait.until(120){frame.span(:class => "header_text").exists?}
@@ -27,10 +28,24 @@ class Timeclock
 		return employee
 	end
 
-	def checkClockin
+	def get(info)
 		frame = $b.frame(:name => 'content')
-		Watir::Wait.until(120){frame.span(:class => "display_time").exists?}
-		time = frame.span(:class => "display_time").text
+		if info == "Current Time"
+			Watir::Wait.until(120){frame.span(:xpath => '//*[@id="display_time"]').exists?}
+			value = frame.span(:xpath => '//*[@id="display_time"]').text
+		else
+			info_data = {
+				"Clockin Time" => '//*[@id="times"]/div[2]',
+				"Edited Time" => '//*[@id="times"]/div[3],',
+				"Clockin Position" => '//*[@id="times"]/div[4]',
+				"Clockout Time" => '//*[@id="times"]/div[6]',
+				"Clockout Position" => '//*[@id="times"]/div[8]'
+			}
+			path = info_data.fetch(info)
+			Watir::Wait.until(120){frame.div(:xpath => path).exists?}
+			value = frame.div(:xpath => path).text
+		end
+		return value
 	end
 	
 end #of Class
