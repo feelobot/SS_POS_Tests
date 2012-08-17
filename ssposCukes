@@ -1,14 +1,13 @@
 #!/bin/bash
 cd /var/www/screenshots
 find . -type f -iname \*.png -delete
-cd /home/code/SS_POS_Tests
+cd ~/SS_POS_Tests/
 git pull origin master
 bundle install
 HEADLESS=true cucumber -f rerun -o cukeResults.txt  -f html -o /var/www/cukeResults.html
-HEADLESS cucumber -f rerun -o cukeResults.txt  -f html -o /var/www/cukeResults.html
-zip -r -9 --exclude=*.zip* /home/code/SS_POS_Tests/screenshots/lastrun.zip /home/code/SS_POS_Tests/screenshots 
+zip -r -9 --exclude=*.zip* ~/SS_POS_Tests/screenshots/lastrun.zip /home/code/SS_POS_Tests/screenshots 
 ruby mailResults.rb
-mv /home/code/SS_POS_Tests/screenshots/lastrun.zip /home/code/SS_POS_Tests/screenshots/`date +%Y%m%d-%T`.zip
-cp -r /home/code/SS_POS_Tests/screenshots/* /var/www/screenshots
-cd /home/code/SS_POS_Tests/screenshots
+mv /home/code/SS_POS_Tests/screenshots/lastrun.zip ~/SS_POS_Tests/screenshots/`date +%Y%m%d-%T`.zip
+cp -r ~/SS_POS_Tests/screenshots/* /var/www/screenshots
+cd ~/SS_POS_Tests/screenshots
 find . -type f -iname \*.png -delete
