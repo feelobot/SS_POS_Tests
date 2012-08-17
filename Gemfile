@@ -1,5 +1,4 @@
 source "http://rubygems.org"
-gem "capybara"
 gem "rspec"
 gem "headless"
 gem "cucumber"	
