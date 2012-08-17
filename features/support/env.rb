@@ -15,7 +15,7 @@ require 'load'
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 if ENV['HEADLESS']
 	require 'headless'	
-	headless = Headless.new
+	headless = Headless.new(:display => '100')
 	headless.start
 
 	at_exit do
