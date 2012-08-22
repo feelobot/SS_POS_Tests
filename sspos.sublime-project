@@ -3,6 +3,9 @@
 	[
 		{
 			"path": "/home/felix/Code/SS_POS_Tests"
+		},
+		{
+			"path": "/home/felix/Code/PickleCI"
 		}
 	]
 }

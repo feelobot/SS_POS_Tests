@@ -2,6 +2,8 @@ require 'rubygems'
 require 'bundler/setup'	
 require 'capybara/cucumber'
 require 'timeout'
+require 'selenium-webdriver'
+require 'watir-webdriver'
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 # ADDED CUSTOM LIB
 #///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -14,21 +16,47 @@ require 'load'
 # REQUIREMENTS FOR HEADLESS MODE (NO VISIBLE BROWSER)
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 if ENV['HEADLESS']
-	require 'headless'	
-	headless = Headless.new(:display => '100')
-	headless.start
-
-	at_exit do
-		headless.destroy
-	end
+  require 'headless'
+  headless = Headless.new
+  headless.start 
+  headless.video.start_capture
+  at_exit do
+  	headless.video.stop_and_save("tests.mov")
+    headless.destroy
+  end
 end
-#///////////////////////////////////////////////////////////////////////////////////////////////////
-
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 # WATIR START AND CONFIG 
 #///////////////////////////////////////////////////////////////////////////////////////////////////
-require 'watir-webdriver'
 $b = Watir::Browser.new :chrome
 $baseURL= "http://rogerspos:be81f6@173.242.122.14/"
 $ss = Load.new	
+
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+# DATABASE SNAPSHOT CONTROL
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+
+Before do |scenario|
+	db_to_load = ENV['LOAD']
+	if db_to_load.nil?
+		puts "no db to load"
+	else
+		$b.goto("#{$baseURL}importDB.php?name=#{db_to_load}")
+		$b.p(:id, 'results').text.include? "Completed"
+		puts "#{db_to_load} loaded"
+	end
+end
+
+After do |scenario|
+	if ENV['SNAPSHOTS']
+		if (scenario.failed?) == false
+			$b.goto($baseURL + "exportDB.php?name=#{scenario.feature.name}")
+			$b.p(:id, 'results').text.include? "Completed"
+			puts "#{scenario.feature.name}.sql File Created"
+		end
+	end
+end	
+#///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 

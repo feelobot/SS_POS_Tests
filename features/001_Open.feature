@@ -1,10 +1,12 @@
-Feature: Open Till
+Feature: 001 Open Till
 	In Order to count and the opening till
 	As stylist
 	I want to show the values add up correctly and save properly
 
 Background:
-	Given the status of the till is "Incomplete"
+	When I am on the "Manager" Tab 
+	And I select the "Opening" Button
+	Then the status of the till is "Incomplete"
 	
 Scenario:
 	When I store the following into cash count helper
@@ -22,7 +24,7 @@ Scenario:
 	|  Nickles      |  50   |
 	|  Cents        |  300  |
 
-	Then I should get the following results
+	Then the cash count helper should show the following results
 
 	|  Hundreds     |  1    |  100.00  |
 	|  Fifties      |  1    |  50.00   |
@@ -37,9 +39,11 @@ Scenario:
 	|  Nickles      |  50   |  2.50    |
 	|  Cents        |  300  |  3.00    |
 
-	And the "Total Cash Count" should be "250.00"
-	And the "Counted Till" should be "250.00"
-	And the "Expected Till" should be "100.00"
-	And the "Difference" should be "150.00"
+	And the Opeing Till Cash should show
+	|  Total Cash Count  |  250.00  |
+	|  Counted Till      |  250.00  |
+	|  Expected Till     |  100.00  |
+	|  Difference        |  150.00  |
+
 	When I hit "Save" Opening Till Count
-	Then the status should change to "Completed"
+	Then the status of the till is "Completed"
