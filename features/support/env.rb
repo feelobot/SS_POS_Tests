@@ -20,8 +20,9 @@ if ENV['HEADLESS']
   headless = Headless.new
   headless.start 
   headless.video.start_capture
+ 
   at_exit do
-  	headless.video.stop_and_save("tests.mov")
+  	headless.video.stop_and_save("sspos_cukes#{Time.now}.mov")
     headless.destroy
   end
 end
@@ -36,25 +37,17 @@ $ss = Load.new
 # DATABASE SNAPSHOT CONTROL
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
-Before do |scenario|
-	db_to_load = ENV['LOAD']
-	if db_to_load.nil?
-		puts "no db to load"
-	else
-		$b.goto("#{$baseURL}importDB.php?name=#{db_to_load}")
-		$b.p(:id, 'results').text.include? "Completed"
-		puts "#{db_to_load} loaded"
-	end
-end
-
 After do |scenario|
 	if ENV['SNAPSHOTS']
-		if (scenario.failed?) == false
+		if(scenario.failed?)
+			puts "scenario failed no snapshot taken"
+		else
 			$b.goto($baseURL + "exportDB.php?name=#{scenario.feature.name}")
-			$b.p(:id, 'results').text.include? "Completed"
-			puts "#{scenario.feature.name}.sql File Created"
+			$b.p(:text, /Completed/).wait_until_present
+			puts "#{scenario.feature.name} DB Created"
 		end
 	end
+	Cucumber.wants_to_quit = true if scenario.failed?
 end	
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 

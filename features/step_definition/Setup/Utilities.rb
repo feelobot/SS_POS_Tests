@@ -5,6 +5,7 @@
 Given /^The Database is New and Untouched$/ do
 	@testname = File.basename(__FILE__,".rb")
 	$ss.loadDBSnapshot("000a")
+	puts "000a DB Loaded"
 	$ss.takeScreenShot(@testname,"Given")
 	$b.goto $baseURL 
 end
@@ -13,7 +14,7 @@ end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 # Utilities
 #///////////////////////////////////////////////////////////////////////////////////////////////////
-When /^I run the "(.*?)" utility$/ do |arg1|
+When /I run the "(.*?)" utility/ do |arg1|
 	@frame = $b.frame(:name => "content").frame(:name => "setupcontent")
 	@frame.button(:text, arg1).click
 end

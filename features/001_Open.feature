@@ -1,14 +1,12 @@
 Feature: 001 Open Till
-	In Order to count and the opening till
-	As stylist
-	I want to show the values add up correctly and save properly
 
-Background:
-	When I am on the "Manager" Tab 
-	And I select the "Opening" Button
-	Then the status of the till is "Incomplete"
+Background: 
+	Given any needed databases are loaded
 	
-Scenario:
+Scenario: Open the till with $250
+	When I am on the "Manager" tab 
+	And I select the "Opening" button
+	Then the status of the till is "Incomplete"
 	When I store the following into cash count helper
 	
 	|  Hundreds     |  1    |

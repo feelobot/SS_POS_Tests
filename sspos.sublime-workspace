@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"U",
+				"Utilities"
+			],
+			[
+				"time",
+				"timeout"
+			],
+			[
+				"do",
+				"do"
+			],
+			[
+				"onc",
+				"onclick"
+			],
+			[
+				"Whe",
+				"when_present"
+			],
+			[
+				"wait",
+				"wait_until_present"
+			],
+			[
+				"when",
+				"when_present"
+			],
+			[
+				"text",
+				"text"
+			],
+			[
 				"margin",
 				"margin-left"
 			],
@@ -14,10 +46,6 @@
 			[
 				"tab",
 				"tabmenu"
-			],
-			[
-				"text",
-				"text-indent"
 			],
 			[
 				"back",
@@ -86,60 +114,32 @@
 			[
 				"update",
 				"update_attributes"
-			],
-			[
-				"do",
-				"do"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "features/step_definition/000_DBChecker.rb",
+			"file": "features/step_definition/Setup/Utilities.rb",
 			"settings":
 			{
-				"buffer_size": 1715,
+				"buffer_size": 1629,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "features/step_definition/001_Open.rb",
+			"file": "features/step_definition/Sales/Checkout.rb",
 			"settings":
 			{
-				"buffer_size": 1914,
+				"buffer_size": 1823,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "features/step_definition/002_Clockin.rb",
+			"file": "features/002_ClockIn.feature",
 			"settings":
 			{
-				"buffer_size": 1428,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "features/step_definition/003_Add_Customer.rb",
-			"settings":
-			{
-				"buffer_size": 729,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "lib/helpers/timeclock.rb",
-			"settings":
-			{
-				"buffer_size": 1620,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "features/support/env.rb",
-			"settings":
-			{
-				"buffer_size": 1464,
+				"buffer_size": 1195,
 				"line_ending": "Unix"
 			}
 		},
@@ -147,7 +147,7 @@
 			"file": "features/003_Add_Customer.feature",
 			"settings":
 			{
-				"buffer_size": 403,
+				"buffer_size": 2034,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,32 +155,56 @@
 			"file": "features/004_Requests.feature",
 			"settings":
 			{
-				"buffer_size": 431,
+				"buffer_size": 906,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Gemfile",
+			"file": "features/005_Next_Available.feature",
 			"settings":
 			{
-				"buffer_size": 194,
+				"buffer_size": 803,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/007_Multi-Service_Sale.feature",
+			"settings":
+			{
+				"buffer_size": 833,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/006_Multi-Ticket_Tip.feature",
+			"settings":
+			{
+				"buffer_size": 2585,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/000_DBChecker.feature",
+			"settings":
+			{
+				"buffer_size": 467,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 264.0,
+		"height": 270.0,
 		"selected_items":
 		[
 			[
-				"ins",
-				"Package Control: Install Package"
-			],
-			[
 				"hk",
 				"Snippet: hk"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
 			],
 			[
 				"snipp",
@@ -243,7 +267,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 449.0
+		"width": 530.0
 	},
 	"console":
 	{
@@ -260,13 +284,53 @@
 	},
 	"file_history":
 	[
-		"/home/felix/Code/PickleCI/Gemfile",
+		"/home/felix/Code/SS_POS_Tests/features/006_Multi-Service_Sale.feature",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales/TicketOptions.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Setup/Utilities.rb",
+		"/home/felix/Code/SS_POS_Tests/features/001_Open.feature",
+		"/home/felix/Code/SS_POS_Tests/features/000_DBChecker.feature",
+		"/home/felix/Code/SS_POS_Tests/features/pages/1_Sales/Default.rb",
+		"/home/felix/Code/SS_POS_Tests/features/pages/1_Sales/CustomerSearch.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales/CustomerSearch.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales/Checkout.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Defaults.rb",
+		"/home/felix/Code/SS_POS_Tests/features/support/env.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Reports/Payroll.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Setup.rb",
+		"/home/felix/Code/SS_POS_Tests/lib/load.rb",
+		"/home/felix/Code/SS_POS_Tests/features/support/pages/7_Setup/Utilities.rb",
+		"/home/felix/Code/SS_POS_Tests/features/pages/7_Setup/Utilities.rb",
+		"/home/felix/Code/SS_POS_Tests/features/pages/1_Sales/default.rb",
+		"/home/felix/Code/SS_POS_Tests/features/pages/1_Sales/customer_search.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales/TicketOptions",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Timeclock.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales.rb",
+		"/home/felix/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/felix/Code/SS_POS_Tests/features/002_ClockIn.feature",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/003_Add_Customer.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/004_Requests.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/002_Clockin.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Manager/Opening.rb",
+		"/home/felix/Code/SS_POS_Tests/lib/helpers/timeclock.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Payroll.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Reports.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definitions/reports.rb",
+		"/home/felix/Code/SS_POS_Tests/lib/helpers/reports.rb",
+		"/home/felix/Code/SS_POS_Tests/lib/helpers/manager.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Tabs.rb",
+		"/home/felix/Code/PickleCI/app/controllers/testcases_controller.rb",
 		"/home/felix/Code/SS_POS_Tests/Gemfile",
+		"/home/felix/Code/SS_POS_Tests/lib/helpers/sales.rb",
+		"/home/felix/Code/SS_POS_Tests/features/004_Requests.feature",
+		"/home/felix/Code/SS_POS_Tests/features/003_Add_Customer.feature",
+		"/home/felix/Code/SS_POS_Tests/lib/helpers/setupHelper.rb",
+		"/home/felix/Code/PickleCI/sftp-config.json",
+		"/home/felix/Code/SS_POS_Tests/sftp-config.json",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/001_Open.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/000_DBChecker.rb",
+		"/home/felix/Code/PickleCI/Gemfile",
 		"/home/felix/Code/PickleCI/app/views/layouts/application.html.erb",
 		"/home/felix/Code/PickleCI/app/assets/stylesheets/application.css",
-		"/home/felix/Code/SS_POS_Tests/lib/load.rb",
-		"/home/felix/Code/PickleCI/app/controllers/testcases_controller.rb",
-		"/home/felix/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/felix/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 		"/home/felix/Code/PickleCI/app/views/testcases/index.html.erb",
 		"/home/felix/Code/PickleCI/app/assets/stylesheets/home.css.scss",
@@ -280,35 +344,22 @@
 		"/home/felix/Code/PickleCI/config/initializers/secret_token.rb",
 		"/home/felix/Code/PickleCI/config/initializers/session_store.rb",
 		"/home/felix/Code/PickleCI/config/application.rb",
-		"/home/felix/Code/SS_POS_Tests/features/002_ClockIn.feature",
-		"/home/felix/Code/SS_POS_Tests/features/003_Add_Customer.feature",
-		"/home/felix/Code/SS_POS_Tests/features/000_DBChecker.feature",
 		"/home/felix/Code/SS_POS_Tests/Gemfile.bk",
 		"/home/felix/Code/SS_POS_Tests/Gemfile.lock.bk",
 		"/home/felix/Code/SS_POS_Tests/Gemfile.lock",
-		"/home/felix/Code/SS_POS_Tests/lib/helpers/setupHelper.rb",
 		"/home/felix/Code/SS_POS_Tests/features/003a_Add_Customer_With_Customer_Search.feature",
 		"/home/felix/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/felix/Code/SS_POS_Tests/ssposCukes",
-		"/home/felix/Code/SS_POS_Tests/sftp-config.json",
 		"/home/felix/Code/SS_POS_Tests/README.md",
-		"/home/felix/Code/SS_POS_Tests/features/support/env.rb",
 		"/home/felix/Code/SS_POS_Tests/features/chromedriver.log",
-		"/home/felix/Code/SS_POS_Tests/features/001_Open.feature",
 		"/home/felix/Code/SS_POS_Tests/.c9revisions/features/002_ClockIn.feature.c9save",
 		"/home/felix/Code/SS_POS_Tests/.c9revisions/features/000_DBChecker.feature.c9save",
 		"/home/felix/Code/SS_POS_Tests/mailResults.rb",
-		"/home/felix/Code/SS_POS_Tests/lib/helpers/manager.rb",
 		"/home/felix/Code/SS_POS_Tests/lib/helpers/manager/opening.rb",
-		"/home/felix/Code/SS_POS_Tests/lib/helpers/timeclock.rb",
-		"/home/felix/Code/SS_POS_Tests/lib/helpers/reports.rb",
 		"/home/felix/Code/SS_POS_Tests/lib/helpers/manager/manager.rb",
-		"/home/felix/Code/SS_POS_Tests/features/step_definition/002_Clockin.rb",
-		"/home/felix/Code/SS_POS_Tests/features/step_definition/000_DBChecker.rb",
 		"/home/felix/Code/SS_POS_Tests/mailResults.rb.bkup",
 		"/home/felix/.config/sublime-text-2/Packages/User/hk.sublime-snippet",
 		"/home/felix/.config/sublime-text-2/Packages/User/HM.sublime-snippet",
-		"/home/felix/Code/SS_POS_Tests/features/step_definition/001_Open.rb",
 		"/home/felix/Code/SS_POS_Tests/.c9revisions/lib/helpers/manager/opening.rb.c9save",
 		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/features/step_definition/000_DBChecker.rb",
 		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/lib/load.rb",
@@ -360,26 +411,7 @@
 		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/lib/bttns.rb",
 		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/screenshots/000_DBChecker/Step1a.png",
 		"/home/felix/Code/backmasked/app/views/top5/index.html.erb",
-		"/home/felix/Code/backmasked/app/controllers/top5_controller.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/lib/tabs.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/features/step_definition/utilities.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/lib/buttons.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/lib/button.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/lib/sections.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/lib/pages.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/features/step_definition/utiliteis.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/features/step_definition/db_checker.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/features/001_Open.feature.backup",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/features/step_definition/001_Open.feature",
-		"/home/felix/.config/sublime-text-2/Packages/User/Distraction Free.sublime-settings",
-		"/home/felix/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/features/db_checker.feature",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/ssTestingCI/config/routes.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/ssTestingCI/app/views/testcases/index.html.erb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/ssTestingCI/config/environments/development.rb",
-		"/home/felix/Downloads/schacon-ruby-git-b79de3a/README",
-		"/home/felix/Downloads/schacon-ruby-git-b79de3a/TODO",
-		"/home/felix/Downloads/schacon-ruby-git-b79de3a/camping/gitweb.rb"
+		"/home/felix/Code/backmasked/app/controllers/top5_controller.rb"
 	],
 	"find":
 	{
@@ -387,7 +419,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"<project>",
@@ -402,6 +434,11 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"servicing",
+			"checkout",
+			"indent",
+			"space",
+			"$b.goto($baseURL + \"exportDB.php?name=#{scenario.feature.name}\")\n			Watir::Wait.until(30){$b.p(:id, 'results').text.include? \"Completed\"}\n			puts \"#{scenario.feature.name} DB Created\"",
 			"link_to",
 			"li",
 			"SsTestingCI",
@@ -480,23 +517,23 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "features/step_definition/000_DBChecker.rb",
+					"file": "features/step_definition/Setup/Utilities.rb",
 					"settings":
 					{
-						"buffer_size": 1715,
+						"buffer_size": 1629,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								140,
-								140
+								848,
+								848
 							]
 						],
 						"settings":
@@ -515,80 +552,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "features/step_definition/001_Open.rb",
+					"file": "features/step_definition/Sales/Checkout.rb",
 					"settings":
 					{
-						"buffer_size": 1914,
+						"buffer_size": 1823,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								125,
-								125
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "features/step_definition/002_Clockin.rb",
-					"settings":
-					{
-						"buffer_size": 1428,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								653,
-								653
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "features/step_definition/003_Add_Customer.rb",
-					"settings":
-					{
-						"buffer_size": 729,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								115,
-								115
+								345,
+								345
 							]
 						],
 						"settings":
@@ -609,23 +584,23 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 5,
 			"sheets":
 			[
 				{
-					"buffer": 4,
-					"file": "lib/helpers/timeclock.rb",
+					"buffer": 2,
+					"file": "features/002_ClockIn.feature",
 					"settings":
 					{
-						"buffer_size": 1620,
+						"buffer_size": 1195,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								131,
-								131
+								509,
+								509
 							]
 						],
 						"settings":
@@ -633,8 +608,67 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "features/003_Add_Customer.feature",
+					"settings":
+					{
+						"buffer_size": 2034,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1384,
+								1384
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 426.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "features/004_Requests.feature",
+					"settings":
+					{
+						"buffer_size": 906,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -644,26 +678,29 @@
 				},
 				{
 					"buffer": 5,
-					"file": "features/support/env.rb",
+					"file": "features/005_Next_Available.feature",
 					"settings":
 					{
-						"buffer_size": 1464,
+						"buffer_size": 803,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								998,
-								998
+								386,
+								386
 							]
 						],
 						"settings":
 						{
+							"auto_name": "",
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -673,26 +710,27 @@
 				},
 				{
 					"buffer": 6,
-					"file": "features/003_Add_Customer.feature",
+					"file": "features/007_Multi-Service_Sale.feature",
 					"settings":
 					{
-						"buffer_size": 403,
+						"buffer_size": 833,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								299,
-								299
+								36,
+								36
 							]
 						],
 						"settings":
 						{
-							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage"
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -702,18 +740,18 @@
 				},
 				{
 					"buffer": 7,
-					"file": "features/004_Requests.feature",
+					"file": "features/006_Multi-Ticket_Tip.feature",
 					"settings":
 					{
-						"buffer_size": 431,
+						"buffer_size": 2585,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								249,
-								249
+								1919,
+								1919
 							]
 						],
 						"settings":
@@ -721,28 +759,30 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage"
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 429.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "Gemfile",
+					"file": "features/000_DBChecker.feature",
 					"settings":
 					{
-						"buffer_size": 194,
+						"buffer_size": 467,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								117,
-								117
+								165,
+								165
 							]
 						],
 						"settings":
@@ -750,7 +790,8 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -824,10 +865,10 @@
 		],
 		"width": 380.0
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 144.0,
+	"side_bar_width": 272.0,
 	"status_bar_visible": false
 }
