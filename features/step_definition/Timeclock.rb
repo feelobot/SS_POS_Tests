@@ -3,6 +3,7 @@ And /^I type employee ID "(.*?)" to clock in$/ do |arg1|
   @frame.text_field(:id, "employee_code").set(arg1)
   sleep 2
   @frame.send_keys :enter
+  @frame.send_keys :enter
 end
 
 

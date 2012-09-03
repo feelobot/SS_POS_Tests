@@ -1,3 +1,4 @@
+@complete
 Feature: 003 Add Customer
 
 Scenario: Add a customer with phone number by using search autocomplete
@@ -35,6 +36,7 @@ Scenario: Add a customer with phone number by using search autocomplete
 	Then the customer should save without any errors
 	And "Julio Rodriguez" should be entered in the customer database
 
+Scenario: Add another customer from autocomplete
     Given I am on the "Sales" tab 
 	When the "New Ticket" button in sales is selected
     And "Felix Rodriguez" is entered in customer search
@@ -51,3 +53,5 @@ Scenario: Add a customer with phone number by using search autocomplete
 	And if the Save button is pushed in the new customer window
 	Then the customer should save without any errors
 	And "Felix Rodriguez" should be entered in the customer database
+
+And check if the database needs to be saved

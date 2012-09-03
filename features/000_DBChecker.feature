@@ -1,3 +1,4 @@
+@complete
 Feature: 000b DBChecker
 
 Background: 
@@ -13,3 +14,4 @@ Scenario: Verify Check Database Structure Utility is working properly
 	And Wait for "Database Check Completed"
 	Then there should be no database changes
 	
+And check if the database needs to be saved

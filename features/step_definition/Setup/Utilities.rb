@@ -6,7 +6,6 @@ Given /^The Database is New and Untouched$/ do
 	@testname = File.basename(__FILE__,".rb")
 	$ss.loadDBSnapshot("000a")
 	puts "000a DB Loaded"
-	$ss.takeScreenShot(@testname,"Given")
 	$b.goto $baseURL 
 end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -32,7 +31,6 @@ end
 				@frame.li(:text, "0 Field changes made").exists?
 				@frame.li(:text, "0 Index changes made").exists?
 			}
-		$ss.takeScreenShot(@testname,"Step3")
 	end
 	#///////////////////////////////////////////////////////////////////////////////////////////////////
 

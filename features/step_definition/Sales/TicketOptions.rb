@@ -3,12 +3,7 @@ Then /^the Ticket Options window should appear$/ do
 end
 
 Then /^"(.*?)" is pushed from ticket options$/ do |arg1|
-  ticketOpts = {
-  	"Send to Waiting" => "ticketOptions_sendToWaiting",
-  	"" => ""
-  }
-  id = ticketOpts.fetch(arg1)
-  @frame.button(:id => "#{id}").when_present.fire_event('onclick')
+  @frame.button(:text => /#{arg1}/).when_present.fire_event('onclick')
 end
 
 When /^"(.*?)" is set as the requested stylist$/ do |arg1|

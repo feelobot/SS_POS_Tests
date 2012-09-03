@@ -6,6 +6,7 @@ Given /any needed databases are loaded/ do
 		$b.p(:text, /Completed/).wait_until_present
 		$b.goto $baseURL
 		puts "#{ENV['LOAD']} database loaded"
+		ENV['LOAD'] = nil
 	end
 end
 
@@ -46,3 +47,11 @@ When /^the "(.*?)" button in sales is selected$/ do |arg1|
 end
 
 #///////////////////////////////////////////////////////////////////////////////////////////////////
+
+And /check if the database needs to be saved/ do
+	if ENV['SNAPSHOTS']
+		$b.goto($baseURL + "exportDB.php?name=#{@feature_name}")
+		$b.p(:text, /Completed/).wait_until_present
+		puts "#{@feature_name} DB Created"
+	end
+end

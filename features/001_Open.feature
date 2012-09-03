@@ -1,3 +1,4 @@
+@complete
 Feature: 001 Open Till
 
 Background: 
@@ -45,3 +46,5 @@ Scenario: Open the till with $250
 
 	When I hit "Save" Opening Till Count
 	Then the status of the till is "Completed"
+
+And check if the database needs to be saved

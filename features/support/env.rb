@@ -37,19 +37,40 @@ $ss = Load.new
 # DATABASE SNAPSHOT CONTROL
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
-After do |scenario|
-	if ENV['SNAPSHOTS']
-		if(scenario.failed?)
-			puts "scenario failed no snapshot taken"
-		else
-			$b.goto($baseURL + "exportDB.php?name=#{scenario.feature.name}")
-			$b.p(:text, /Completed/).wait_until_present
-			puts "#{scenario.feature.name} DB Created"
-		end
+Before do |scenario|
+	@current_scenario = scenario
+	@feature_name = @current_scenario.feature.name
+end
+AfterStep do |scenario|
+	$ss.takeScreenShot(@feature_name + Time.now.to_s)
+	if @current_scenario.failed?
+		Cucumber.wants_to_quit = true 
 	end
-	Cucumber.wants_to_quit = true if scenario.failed?
-end	
+end
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 
+if ENV['MAIL']
+  at_exit do
+    require 'mail'
+    `zip -r -9 --exclude=*.zip* /home/felix/Code/SS_POS_Tests/screenshots/lastrun.zip /home/felix/Code/SS_POS_Tests/screenshots`
+      mail = Mail.new do
+      from    'QA@rogerspos.com'
+      to      'felix.rodriguez@rogerspos.com'
+      subject 'AutoTest Failures'
+      add_file '/home/felix/Code/SS_POS_Tests/screenshots/lastrun.zip'
+      html_part do
+        content_type 'text/html; charset=UTF-8'
+        body  '<h3>Failed Features:</h3>' + File.read('cukeResults.txt') + 
+              '<p><a href="http://testing.supersalon.com/cukeResults.html">See Full Report</a></p>' +
+              '<p><a href="http://testing.supersalon.com/screenshots">See Screenshots</a></p>' +
+              '<p><a href="#{baseURL}/coverage/index.php">Code Coverage</a></p>'
+      end
+    end
+    mail.deliver
+    `mv /home/felix/Code/SS_POS_Tests/screenshots/lastrun.zip /home/felix/Code/SS_POS_Tests/screenshots/date +%Y%m%d-%T .zip`
+    `cd /home/felix/Code/SS_POS_Tests/screenshots && find . -type f -iname \*.png -delete`
+  end
+  
+end
 
 

@@ -1,3 +1,4 @@
+@complete
 Feature: 002 Clock In
 
 Background: 
@@ -32,4 +33,6 @@ Scenario: Clock everyone in
     Then the "Sample Stylist 2" timecard should appear
 	And the clock in as "Stylist" button is pushed
 	Then "Current" time and "Clockin" time should match
+
+And check if the database needs to be saved	
 	
