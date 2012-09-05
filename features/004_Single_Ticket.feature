@@ -22,19 +22,19 @@ Scenario: 004a Pre Select A Stylist as Request
     And "Sample Stylist 1" underneath the request
     Then void the ticket
 
-Scenario: 004b Create 3 Seperate Tickets and merge them together on a multi-ticket
+Scenario: 004b Preselect a Service from ticket options
     Given I am on the "Sales" tab 
     When the "New Ticket" button in sales is selected
     And  I skip customer selection
     Then the Ticket Options window should appear
     When "Next Available" is set as the requested stylist
+    And Adult Haircut service is selected in ticket options
     And "Send to Waiting" is pushed from ticket options
     Then the ticket color should be "orange"
     When the ticket is pushed to "Servicing" from waiting
     And "Next available" is set as the requested employee
     Then the ticket color should be "orange"
     When the ticket is pushed to "Checkout" from servicing
-    And Adult Haircut service is selected for checkout
     And "Sample Receptionist" should appear under the item in checkout
     Then void the ticket 
 

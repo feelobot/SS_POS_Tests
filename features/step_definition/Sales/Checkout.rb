@@ -17,7 +17,7 @@ end
 
 And /^"(.*?)" is set as the requested employee$/ do  |arg1|
   @frame.div(:text => /Request Employee/).wait_until_present
-  @frame.button(:text => /#{arg1}/).when_present.fire_event('onclick')
+  @frame.button(:text => /#{arg1}/).when_present(timeout=60).fire_event('onclick')
   @frame.td(:text => "Sample").wait_until_present
 end
 
@@ -63,4 +63,29 @@ end
 Then /^put the ticket on hold$/ do
   @frame.button(:xpath => '//*[@id="receipt_list"]/button[3]').when_present.fire_event('onlick')
   @frame.td(:text => /Waiting/).wait_until_present(timeout=60)
+end
+
+When /^all (\d+) holding tickets are added to the current ticket$/ do |arg1|
+  @frame.button(:text => /Add Ticket/).when_present.click
+  @frame.button(:text => /Felix Rodriguez/).when_present.click
+  @frame.th(:text => /Felix Rodriguez/).wait_until_present
+  @frame.button(:text => /Add Ticket/).when_present.click
+  @frame.button(:text => /Julio Rodriguez/).when_present.click
+  @frame.th(:text => /Julio Rodriguez/).wait_until_present
+end
+
+When /^I ringout the ticket$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
+When /^I add \$ "(.*?)" more than the total cost of the multi\-ticket$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^the tip for each stylist should be \$ "(.*?)"$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^the multi\-ticket sale is completed\.$/ do
+  pending # express the regexp above with the code you wish you had
 end

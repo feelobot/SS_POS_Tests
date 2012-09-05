@@ -4,16 +4,16 @@
 		"selected_items":
 		[
 			[
+				"time",
+				"timeout=60"
+			],
+			[
 				"onl",
 				"onclick"
 			],
 			[
 				"U",
 				"Utilities"
-			],
-			[
-				"time",
-				"timeout"
 			],
 			[
 				"do",
@@ -124,6 +124,22 @@
 	"buffers":
 	[
 		{
+			"file": "features/support/env.rb",
+			"settings":
+			{
+				"buffer_size": 3379,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/step_definition/Sales/Checkout.rb",
+			"settings":
+			{
+				"buffer_size": 2606,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "features/step_definition/Setup/Utilities.rb",
 			"settings":
 			{
@@ -132,10 +148,10 @@
 			}
 		},
 		{
-			"file": "features/step_definition/Sales/Checkout.rb",
+			"file": "features/step_definition/Sales/TicketOptions.rb",
 			"settings":
 			{
-				"buffer_size": 2593,
+				"buffer_size": 595,
 				"line_ending": "Unix"
 			}
 		},
@@ -143,7 +159,7 @@
 			"file": "features/step_definition/Reports/Payroll.rb",
 			"settings":
 			{
-				"buffer_size": 736,
+				"buffer_size": 688,
 				"line_ending": "Unix"
 			}
 		},
@@ -164,58 +180,18 @@
 			}
 		},
 		{
-			"file": "lib/load.rb",
-			"settings":
-			{
-				"buffer_size": 1491,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "features/support/env.rb",
-			"settings":
-			{
-				"buffer_size": 3041,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "features/step_definition/Timeclock.rb",
 			"settings":
 			{
-				"buffer_size": 1342,
+				"buffer_size": 1257,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "features/000_DBChecker.feature",
+			"file": "Gemfile",
 			"settings":
 			{
-				"buffer_size": 526,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "features/001_Open.feature",
-			"settings":
-			{
-				"buffer_size": 1429,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "features/002_ClockIn.feature",
-			"settings":
-			{
-				"buffer_size": 1294,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "features/003_Add_Customer.feature",
-			"settings":
-			{
-				"buffer_size": 2130,
+				"buffer_size": 177,
 				"line_ending": "Unix"
 			}
 		},
@@ -223,7 +199,7 @@
 			"file": "features/004_Single_Ticket.feature",
 			"settings":
 			{
-				"buffer_size": 3370,
+				"buffer_size": 3372,
 				"line_ending": "Unix"
 			}
 		},
@@ -231,23 +207,55 @@
 			"file": "features/005_Multi_Ticket.feature",
 			"settings":
 			{
-				"buffer_size": 3474,
+				"buffer_size": 1891,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "mailResults.rb",
+			"file": "features/006_Refund.feature",
 			"settings":
 			{
-				"buffer_size": 640,
+				"buffer_size": 772,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "ssposCukes",
+			"file": "features/007_Redo.feature",
 			"settings":
 			{
-				"buffer_size": 564,
+				"buffer_size": 826,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/008_Series_Sale.feature",
+			"settings":
+			{
+				"buffer_size": 854,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/009_Discounts.feature",
+			"settings":
+			{
+				"buffer_size": 852,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/010_Restrictions.feature",
+			"settings":
+			{
+				"buffer_size": 1158,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/002_ClockIn.feature",
+			"settings":
+			{
+				"buffer_size": 1791,
 				"line_ending": "Unix"
 			}
 		}
@@ -352,6 +360,16 @@
 	},
 	"file_history":
 	[
+		"/home/felix/Code/SS_POS_Tests/features/002_ClockIn.feature",
+		"/home/felix/Code/SS_POS_Tests/features/001_Open.feature",
+		"/home/felix/Code/SS_POS_Tests/features/003_Add_Customer.feature",
+		"/home/felix/Code/SS_POS_Tests/ssposCukes",
+		"/home/felix/Code/SS_POS_Tests/features/000_DBChecker.feature",
+		"/home/felix/Code/SS_POS_Tests/lib/load.rb",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Timeclock.rb",
+		"/home/felix/Code/SS_POS_Tests/features/007_Series_Sale.feature",
+		"/home/felix/Code/SS_POS_Tests/features/006_Series_Sale.feature",
+		"/home/felix/Code/SS_POS_Tests/mailResults.rb",
 		"/home/felix/Code/SS_POS_Tests/features/008_Multi-Service_Sale_Variable.feature",
 		"/home/felix/Code/SS_POS_Tests/features/007_Multi-Service_Sale.feature",
 		"/home/felix/Code/SS_POS_Tests/features/005_Next_Available.feature",
@@ -360,8 +378,6 @@
 		"/home/felix/Code/SS_POS_Tests/features/006_Multi-Service_Sale.feature",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales/TicketOptions.rb",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/Setup/Utilities.rb",
-		"/home/felix/Code/SS_POS_Tests/features/001_Open.feature",
-		"/home/felix/Code/SS_POS_Tests/features/000_DBChecker.feature",
 		"/home/felix/Code/SS_POS_Tests/features/pages/1_Sales/Default.rb",
 		"/home/felix/Code/SS_POS_Tests/features/pages/1_Sales/CustomerSearch.rb",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales/CustomerSearch.rb",
@@ -370,16 +386,13 @@
 		"/home/felix/Code/SS_POS_Tests/features/support/env.rb",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/Reports/Payroll.rb",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/Setup.rb",
-		"/home/felix/Code/SS_POS_Tests/lib/load.rb",
 		"/home/felix/Code/SS_POS_Tests/features/support/pages/7_Setup/Utilities.rb",
 		"/home/felix/Code/SS_POS_Tests/features/pages/7_Setup/Utilities.rb",
 		"/home/felix/Code/SS_POS_Tests/features/pages/1_Sales/default.rb",
 		"/home/felix/Code/SS_POS_Tests/features/pages/1_Sales/customer_search.rb",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales/TicketOptions",
-		"/home/felix/Code/SS_POS_Tests/features/step_definition/Timeclock.rb",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales.rb",
 		"/home/felix/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/felix/Code/SS_POS_Tests/features/002_ClockIn.feature",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/003_Add_Customer.rb",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/004_Requests.rb",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/002_Clockin.rb",
@@ -394,7 +407,6 @@
 		"/home/felix/Code/PickleCI/app/controllers/testcases_controller.rb",
 		"/home/felix/Code/SS_POS_Tests/Gemfile",
 		"/home/felix/Code/SS_POS_Tests/lib/helpers/sales.rb",
-		"/home/felix/Code/SS_POS_Tests/features/003_Add_Customer.feature",
 		"/home/felix/Code/SS_POS_Tests/lib/helpers/setupHelper.rb",
 		"/home/felix/Code/PickleCI/sftp-config.json",
 		"/home/felix/Code/SS_POS_Tests/sftp-config.json",
@@ -421,12 +433,10 @@
 		"/home/felix/Code/SS_POS_Tests/Gemfile.lock",
 		"/home/felix/Code/SS_POS_Tests/features/003a_Add_Customer_With_Customer_Search.feature",
 		"/home/felix/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
-		"/home/felix/Code/SS_POS_Tests/ssposCukes",
 		"/home/felix/Code/SS_POS_Tests/README.md",
 		"/home/felix/Code/SS_POS_Tests/features/chromedriver.log",
 		"/home/felix/Code/SS_POS_Tests/.c9revisions/features/002_ClockIn.feature.c9save",
 		"/home/felix/Code/SS_POS_Tests/.c9revisions/features/000_DBChecker.feature.c9save",
-		"/home/felix/Code/SS_POS_Tests/mailResults.rb",
 		"/home/felix/Code/SS_POS_Tests/lib/helpers/manager/opening.rb",
 		"/home/felix/Code/SS_POS_Tests/lib/helpers/manager/manager.rb",
 		"/home/felix/Code/SS_POS_Tests/mailResults.rb.bkup",
@@ -477,9 +487,7 @@
 		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/features/step_definition/001_Open.rb",
 		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/features/002_ClockIn.feature",
 		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/lib/bttnOpts/utilities.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/mailResults.rb",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/ssposCukes",
-		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/lib/loadSS.rb"
+		"/home/felix/.gvfs/SFTP for root on 208.115.198.53/home/code/SS_POS_Tests/mailResults.rb"
 	],
 	"find":
 	{
@@ -502,6 +510,10 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Code",
+			" exec('",
+			"ticket options",
+			"waiting",
 			"service",
 			"adult",
 			"servicing",
@@ -572,6 +584,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"`",
 			"PickleCI",
 			"File.basename(__FILE__,\".rb\")",
 			"testname",
@@ -587,11 +600,73 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 7,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "features/support/env.rb",
+					"settings":
+					{
+						"buffer_size": 3379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1073,
+								1073
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 273.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "features/step_definition/Sales/Checkout.rb",
+					"settings":
+					{
+						"buffer_size": 2606,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								363
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "features/step_definition/Setup/Utilities.rb",
 					"settings":
 					{
@@ -615,56 +690,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 71.0,
+						"translation.y": 149.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "features/step_definition/Sales/Checkout.rb",
+					"buffer": 3,
+					"file": "features/step_definition/Sales/TicketOptions.rb",
 					"settings":
 					{
-						"buffer_size": 2593,
+						"buffer_size": 595,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2251,
-								2251
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 612.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "features/step_definition/Reports/Payroll.rb",
-					"settings":
-					{
-						"buffer_size": 736,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								421,
-								421
+								595,
+								595
 							]
 						],
 						"settings":
@@ -681,7 +725,36 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
+					"file": "features/step_definition/Reports/Payroll.rb",
+					"settings":
+					{
+						"buffer_size": 688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								688,
+								688
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "features/step_definition/Sales/CustomerSearch.rb",
 					"settings":
 					{
@@ -692,8 +765,8 @@
 						"selection":
 						[
 							[
-								2230,
-								2230
+								425,
+								425
 							]
 						],
 						"settings":
@@ -706,13 +779,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 39.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "features/step_definition/Defaults.rb",
 					"settings":
 					{
@@ -723,8 +796,8 @@
 						"selection":
 						[
 							[
-								437,
-								437
+								462,
+								462
 							]
 						],
 						"settings":
@@ -742,80 +815,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "lib/load.rb",
-					"settings":
-					{
-						"buffer_size": 1491,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1235,
-								1235
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 78.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "features/support/env.rb",
-					"settings":
-					{
-						"buffer_size": 3041,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1988,
-								1988
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 546.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 7,
 					"file": "features/step_definition/Timeclock.rb",
 					"settings":
 					{
-						"buffer_size": 1342,
+						"buffer_size": 1257,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1004,
-								1004
+								1188,
+								1188
 							]
 						],
 						"settings":
@@ -832,207 +844,21 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 7,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 8,
-					"file": "features/000_DBChecker.feature",
+					"file": "Gemfile",
 					"settings":
 					{
-						"buffer_size": 526,
+						"buffer_size": 177,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								217,
-								217
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "features/001_Open.feature",
-					"settings":
-					{
-						"buffer_size": 1429,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1428,
-								1428
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "features/002_ClockIn.feature",
-					"settings":
-					{
-						"buffer_size": 1294,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1290,
-								1290
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 273.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "features/003_Add_Customer.feature",
-					"settings":
-					{
-						"buffer_size": 2130,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1322,
-								1322
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 429.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "features/004_Single_Ticket.feature",
-					"settings":
-					{
-						"buffer_size": 3370,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								90,
-								90
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 819.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "features/005_Multi_Ticket.feature",
-					"settings":
-					{
-						"buffer_size": 3474,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3171,
-								3171
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 819.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "mailResults.rb",
-					"settings":
-					{
-						"buffer_size": 640,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								638,
-								638
+								177,
+								177
 							]
 						],
 						"settings":
@@ -1047,21 +873,27 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 7,
+			"sheets":
+			[
 				{
-					"buffer": 15,
-					"file": "ssposCukes",
+					"buffer": 9,
+					"file": "features/004_Single_Ticket.feature",
 					"settings":
 					{
-						"buffer_size": 564,
+						"buffer_size": 3372,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								442,
-								442
+								740,
+								740
 							]
 						],
 						"settings":
@@ -1069,10 +901,227 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "features/005_Multi_Ticket.feature",
+					"settings":
+					{
+						"buffer_size": 1891,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12,
+								12
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 234.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "features/006_Refund.feature",
+					"settings":
+					{
+						"buffer_size": 772,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								147,
+								147
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "features/007_Redo.feature",
+					"settings":
+					{
+						"buffer_size": 826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								506,
+								506
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "features/008_Series_Sale.feature",
+					"settings":
+					{
+						"buffer_size": 854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "features/009_Discounts.feature",
+					"settings":
+					{
+						"buffer_size": 852,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								807,
+								783
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 39.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "features/010_Restrictions.feature",
+					"settings":
+					{
+						"buffer_size": 1158,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								317,
+								317
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 117.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "features/002_ClockIn.feature",
+					"settings":
+					{
+						"buffer_size": 1791,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1742,
+								1742
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 390.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1118,6 +1167,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 88.0
+	},
 	"output.sftp":
 	{
 		"height": 88.0

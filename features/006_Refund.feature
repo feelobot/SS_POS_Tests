@@ -1,3 +1,4 @@
+@incomplete
 Feature: 006 Refund Tests
 
 Background: 
@@ -10,9 +11,10 @@ Scenario: A customer comes in and requests a refund
     When I select the customer "Julio Rodriguez" and hit next
     Then the Ticket Options window should appear
     When "Next Available" is set as the requested stylist
-    And "Send to Servicing" is pushed from ticket options
-    Then the ticket color should be "orange"
+    And Refund is set in ticket options
+    And "Send to Checkout" is pushed from ticket options
+    And refund is selected for checkout
     And Adult Haircut service is selected for checkout
-    Then put the ticket on hold
-
+    And a negative balance of "" should appear
+    Then Complete the ticket
 And check if the database needs to be saved

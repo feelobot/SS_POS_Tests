@@ -1,16 +1,14 @@
+
+
 And /^I type employee ID "(.*?)" to clock in$/ do |arg1|
-  @frame = $b.frame(:name => 'content')
   @frame.text_field(:id, "employee_code").set(arg1)
-  sleep 2
-  @frame.send_keys :enter
+  @frame.text_field(:id, "employee_code").fire_event('onfocus')
   @frame.send_keys :enter
 end
 
 
 Then /^the "(.*?)" timecard should appear$/ do |arg1|
-    Watir::Wait.until(120){@frame.span(:class => "header_text").exists?}
-    employee = @frame.span(:class => "header_text").text
-    employee == arg1
+   @frame.span(:text => /#{arg1}/).wait_until_present(timeout=60)
   end
 
 Then /^"(.*?)" time and "(.*?)" time should match$/ do |arg1, arg2|
@@ -34,6 +32,5 @@ Then /^"(.*?)" time and "(.*?)" time should match$/ do |arg1, arg2|
 end
   
 And /^the clock in as "(.*?)" button is pushed$/ do |arg1|
-  Watir::Wait.until(3){@frame.button(:text, /#{arg1}/).exists?}
-  @frame.button(:text, /#{arg1}/).click
+ @frame.button(:text, /#{arg1}/).when_present(timeout=60).fire_event('onclick')
 end

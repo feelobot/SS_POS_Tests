@@ -25,6 +25,7 @@ When /^I am on the "(.*?)" tab$/ do |arg1|
 	}
 	path = tabs.fetch(arg1)
 	$b.frame(:name,"menu").img(:id => path).fire_event('onclick')
+	@frame = $b.frame(:name => 'content')
 end 
 
 And /^I select the "(.*?)" button$/ do |arg1|
