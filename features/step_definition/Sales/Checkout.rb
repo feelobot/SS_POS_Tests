@@ -68,24 +68,18 @@ end
 When /^all (\d+) holding tickets are added to the current ticket$/ do |arg1|
   @frame.button(:text => /Add Ticket/).when_present.click
   @frame.button(:text => /Felix Rodriguez/).when_present.click
-  @frame.th(:text => /Felix Rodriguez/).wait_until_present
+  @frame.th(:text => /Felix Rodriguez/).wait_until_present(timeout=60)
   @frame.button(:text => /Add Ticket/).when_present.click
   @frame.button(:text => /Julio Rodriguez/).when_present.click
-  @frame.th(:text => /Julio Rodriguez/).wait_until_present
+  @frame.th(:text => /Julio Rodriguez/).wait_until_present(timeout=60)
+end
+
+And /the ticket total is "(.*?)"/ do |arg1|
+  @frame.tr(:id => "totalRow").td(:text => "#{arg1}").wait_until_present
 end
 
 When /^I ringout the ticket$/ do
-  pending # express the regexp above with the code you wish you had
+  @frame.button(:text => /Pay Now/).when_present.fire_event('onclick')
+  @frame.h2(:text => "Actions Menu").wait_until_present
 end
 
-When /^I add \$ "(.*?)" more than the total cost of the multi\-ticket$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^the tip for each stylist should be \$ "(.*?)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^the multi\-ticket sale is completed\.$/ do
-  pending # express the regexp above with the code you wish you had
-end

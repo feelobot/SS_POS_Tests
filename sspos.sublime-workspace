@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"arg",
+				"arg1"
+			],
+			[
+				"tex",
+				"text_field"
+			],
+			[
+				"ar",
+				"arg2"
+			],
+			[
 				"time",
 				"timeout=60"
 			],
@@ -124,26 +136,18 @@
 	"buffers":
 	[
 		{
-			"file": "features/support/env.rb",
-			"settings":
-			{
-				"buffer_size": 3379,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "features/step_definition/Sales/Checkout.rb",
 			"settings":
 			{
-				"buffer_size": 2606,
+				"buffer_size": 3336,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "features/step_definition/Setup/Utilities.rb",
+			"file": "features/step_definition/Sales/Payment.rb",
 			"settings":
 			{
-				"buffer_size": 1550,
+				"buffer_size": 693,
 				"line_ending": "Unix"
 			}
 		},
@@ -151,7 +155,7 @@
 			"file": "features/step_definition/Sales/TicketOptions.rb",
 			"settings":
 			{
-				"buffer_size": 595,
+				"buffer_size": 1357,
 				"line_ending": "Unix"
 			}
 		},
@@ -172,34 +176,10 @@
 			}
 		},
 		{
-			"file": "features/step_definition/Defaults.rb",
-			"settings":
-			{
-				"buffer_size": 1666,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "features/step_definition/Timeclock.rb",
 			"settings":
 			{
-				"buffer_size": 1257,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Gemfile",
-			"settings":
-			{
-				"buffer_size": 177,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "features/004_Single_Ticket.feature",
-			"settings":
-			{
-				"buffer_size": 3372,
+				"buffer_size": 1223,
 				"line_ending": "Unix"
 			}
 		},
@@ -207,7 +187,7 @@
 			"file": "features/005_Multi_Ticket.feature",
 			"settings":
 			{
-				"buffer_size": 1891,
+				"buffer_size": 1859,
 				"line_ending": "Unix"
 			}
 		},
@@ -252,10 +232,26 @@
 			}
 		},
 		{
-			"file": "features/002_ClockIn.feature",
+			"file": "features/support/env.rb",
 			"settings":
 			{
-				"buffer_size": 1791,
+				"buffer_size": 3492,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/step_definition/Defaults.rb",
+			"settings":
+			{
+				"buffer_size": 1705,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "features/004_Single_Ticket.feature",
+			"settings":
+			{
+				"buffer_size": 3349,
 				"line_ending": "Unix"
 			}
 		}
@@ -361,6 +357,8 @@
 	"file_history":
 	[
 		"/home/felix/Code/SS_POS_Tests/features/002_ClockIn.feature",
+		"/home/felix/Code/SS_POS_Tests/features/step_definition/Setup/Utilities.rb",
+		"/home/felix/Code/SS_POS_Tests/Gemfile",
 		"/home/felix/Code/SS_POS_Tests/features/001_Open.feature",
 		"/home/felix/Code/SS_POS_Tests/features/003_Add_Customer.feature",
 		"/home/felix/Code/SS_POS_Tests/ssposCukes",
@@ -377,7 +375,6 @@
 		"/home/felix/Code/SS_POS_Tests/features/004_Requests.feature",
 		"/home/felix/Code/SS_POS_Tests/features/006_Multi-Service_Sale.feature",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales/TicketOptions.rb",
-		"/home/felix/Code/SS_POS_Tests/features/step_definition/Setup/Utilities.rb",
 		"/home/felix/Code/SS_POS_Tests/features/pages/1_Sales/Default.rb",
 		"/home/felix/Code/SS_POS_Tests/features/pages/1_Sales/CustomerSearch.rb",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/Sales/CustomerSearch.rb",
@@ -405,7 +402,6 @@
 		"/home/felix/Code/SS_POS_Tests/lib/helpers/manager.rb",
 		"/home/felix/Code/SS_POS_Tests/features/step_definition/Tabs.rb",
 		"/home/felix/Code/PickleCI/app/controllers/testcases_controller.rb",
-		"/home/felix/Code/SS_POS_Tests/Gemfile",
 		"/home/felix/Code/SS_POS_Tests/lib/helpers/sales.rb",
 		"/home/felix/Code/SS_POS_Tests/lib/helpers/setupHelper.rb",
 		"/home/felix/Code/PickleCI/sftp-config.json",
@@ -600,23 +596,23 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "features/support/env.rb",
+					"file": "features/step_definition/Sales/Checkout.rb",
 					"settings":
 					{
-						"buffer_size": 3379,
+						"buffer_size": 3336,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1073,
-								1073
+								3216,
+								3216
 							]
 						],
 						"settings":
@@ -629,25 +625,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 273.0,
+						"translation.y": 819.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "features/step_definition/Sales/Checkout.rb",
+					"file": "features/step_definition/Sales/Payment.rb",
 					"settings":
 					{
-						"buffer_size": 2606,
+						"buffer_size": 693,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								363,
-								363
+								236,
+								236
 							]
 						],
 						"settings":
@@ -655,9 +651,7 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -667,18 +661,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "features/step_definition/Setup/Utilities.rb",
+					"file": "features/step_definition/Sales/TicketOptions.rb",
 					"settings":
 					{
-						"buffer_size": 1550,
+						"buffer_size": 1357,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1548,
-								1548
+								539,
+								539
 							]
 						],
 						"settings":
@@ -690,25 +684,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 149.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "features/step_definition/Sales/TicketOptions.rb",
+					"file": "features/step_definition/Reports/Payroll.rb",
 					"settings":
 					{
-						"buffer_size": 595,
+						"buffer_size": 688,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								595,
-								595
+								585,
+								585
 							]
 						],
 						"settings":
@@ -726,35 +720,6 @@
 				},
 				{
 					"buffer": 4,
-					"file": "features/step_definition/Reports/Payroll.rb",
-					"settings":
-					{
-						"buffer_size": 688,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								688,
-								688
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
 					"file": "features/step_definition/Sales/CustomerSearch.rb",
 					"settings":
 					{
@@ -785,49 +750,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "features/step_definition/Defaults.rb",
-					"settings":
-					{
-						"buffer_size": 1666,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								462,
-								462
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
+					"buffer": 5,
 					"file": "features/step_definition/Timeclock.rb",
 					"settings":
 					{
-						"buffer_size": 1257,
+						"buffer_size": 1223,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1188,
-								1188
+								205,
+								205
 							]
 						],
 						"settings":
@@ -840,36 +775,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 156.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "Gemfile",
-					"settings":
-					{
-						"buffer_size": 177,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								177,
-								177
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 234.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -877,54 +783,23 @@
 			]
 		},
 		{
-			"selected": 7,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 9,
-					"file": "features/004_Single_Ticket.feature",
-					"settings":
-					{
-						"buffer_size": 3372,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								740,
-								740
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 135.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
+					"buffer": 6,
 					"file": "features/005_Multi_Ticket.feature",
 					"settings":
 					{
-						"buffer_size": 1891,
+						"buffer_size": 1859,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12,
-								12
+								1636,
+								1636
 							]
 						],
 						"settings":
@@ -937,13 +812,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 234.0,
+						"translation.y": 351.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 7,
 					"file": "features/006_Refund.feature",
 					"settings":
 					{
@@ -974,7 +849,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 8,
 					"file": "features/007_Redo.feature",
 					"settings":
 					{
@@ -1005,7 +880,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 9,
 					"file": "features/008_Series_Sale.feature",
 					"settings":
 					{
@@ -1036,7 +911,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 10,
 					"file": "features/009_Discounts.feature",
 					"settings":
 					{
@@ -1067,7 +942,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 11,
 					"file": "features/010_Restrictions.feature",
 					"settings":
 					{
@@ -1096,21 +971,27 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
-					"buffer": 16,
-					"file": "features/002_ClockIn.feature",
+					"buffer": 12,
+					"file": "features/support/env.rb",
 					"settings":
 					{
-						"buffer_size": 1791,
+						"buffer_size": 3492,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1742,
-								1742
+								2223,
+								2223
 							]
 						],
 						"settings":
@@ -1118,10 +999,79 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 390.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 13,
+					"file": "features/step_definition/Defaults.rb",
+					"settings":
+					{
+						"buffer_size": 1705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								169
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "features/004_Single_Ticket.feature",
+					"settings":
+					{
+						"buffer_size": 3349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1729,
+								1729
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Cucumber/Cucumber Plain Text Feature.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 330.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1148,15 +1098,28 @@
 				1
 			],
 			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
 				0,
 				1,
 				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
 				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":

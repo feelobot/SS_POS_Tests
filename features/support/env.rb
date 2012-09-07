@@ -17,16 +17,16 @@ require 'load'
 #require 'headless'
 #headless = Headless.new
 #headless.start 
-#headless.video.start_capture
+#
 
 #Selenium::WebDriver::Chrome.path = "/home/feelobot/.chromedriver-helper/linux32/chromedriver"
 require 'headless'
 require 'selenium-webdriver'
-`rm -rvf /home/feelobot/Code/SS_POS_Tests/screenshots/*`
+`rm -rvf /home/feelobot/Code/SS_POS_Tests/screenshots/`
 
 headless = Headless.new
 headless.start
-
+headless.video.start_capture
 
 at_exit do
   headless.video.stop_and_save("sspos_cukes#{Time.now.to_s}.mov")
@@ -64,7 +64,7 @@ end # of AT EXIT
 # WATIR START AND CONFIG 
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 #$b = Watir::Browser.new :chrome
-$b.driver.manage.timeouts.implicit_wait = 1 #1 seconds
+$b.driver.manage.timeouts.implicit_wait = 1 #3 seconds
 $baseURL= "http://rogerspos:be81f6@173.242.122.14/"
 $ss = Load.new	
 

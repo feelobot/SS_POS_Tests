@@ -35,9 +35,10 @@ Scenario: Merge 4 tickets on a multi-ticket
     And "Send to Check-Out" is pushed from ticket options
 
     When all 3 holding tickets are added to the current ticket
+    And the ticket total is "$32.85"
     And I ringout the ticket
-    And I add $ "30.00" more than the total cost of the multi-ticket
-    Then the tip for each stylist should be $ "7.50"
+    And $ "50.00" "Cash" is added on payment screen
+    Then the tip for each stylist should be $ "0.00"
     And the multi-ticket sale is completed.
 
 And check if the database needs to be saved
