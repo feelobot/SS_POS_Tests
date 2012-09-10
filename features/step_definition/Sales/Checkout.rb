@@ -66,11 +66,11 @@ Then /^put the ticket on hold$/ do
 end
 
 When /^all (\d+) holding tickets are added to the current ticket$/ do |arg1|
-  @frame.button(:text => /Add Ticket/).when_present.click
-  @frame.button(:text => /Felix Rodriguez/).when_present.click
+  @frame.button(:text => /Add Ticket/).when_present.fire_event('onclick')
+  @frame.button(:text => /Felix Rodriguez/).when_present.fire_event('onclick')
   @frame.th(:text => /Felix Rodriguez/).wait_until_present(timeout=60)
-  @frame.button(:text => /Add Ticket/).when_present.click
-  @frame.button(:text => /Julio Rodriguez/).when_present.click
+  @frame.button(:text => /Add Ticket/).when_present.fire_event('onclick')
+  @frame.button(:text => /Julio Rodriguez/).when_present.fire_event('onclick')
   @frame.th(:text => /Julio Rodriguez/).wait_until_present(timeout=60)
 end
 
@@ -79,7 +79,6 @@ And /the ticket total is "(.*?)"/ do |arg1|
 end
 
 When /^I ringout the ticket$/ do
-  @frame.button(:text => /Pay Now/).when_present.fire_event('onclick')
-  @frame.h2(:text => "Actions Menu").wait_until_present
+  @frame.td(:id => "receipt_list").button(:xpath => '//*[@id="receipt_list"]/button[4]').when_present.fire_event('onclick')
 end
 

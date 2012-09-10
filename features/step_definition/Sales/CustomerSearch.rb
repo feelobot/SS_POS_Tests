@@ -13,7 +13,8 @@ end
 
 And /^"(.*?)" is entered in customer search$/ do |arg1|
   @frame.text_field(:xpath => "//td[2]/input[2]").wait_until_present
-   @frame.text_field(:xpath => "//td[2]/input[2]").set(arg1)
+  sleep 1
+  @frame.text_field(:xpath => "//td[2]/input[2]").set(arg1)
 end
 
 Then /^the "(.*?)" message should appear$/ do |arg1|

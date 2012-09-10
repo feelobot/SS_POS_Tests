@@ -24,13 +24,15 @@ require 'headless'
 require 'selenium-webdriver'
 `rm -rvf /home/feelobot/Code/SS_POS_Tests/screenshots/`
 
-headless = Headless.new
-headless.start
-headless.video.start_capture
+#if ENV['HEADLESS']
+  headless = Headless.new
+  headless.start
+  headless.video.start_capture
 
-at_exit do
-  headless.video.stop_and_save("sspos_cukes#{Time.now.to_s}.mov")
-end
+  at_exit do
+    headless.video.stop_and_save("sspos_cukes#{Time.now.to_s}.mov")
+  end
+#end
 #capabilities = WebDriver::Remote::Capabilities.htmlunit(:javascript_enabled => true)
 #$b = Watir::Browser.new(:remote, :url => 'http://127.0.0.1:4444/wd/hub', :desired_capabilities => capabilities)
 $b = Watir::Browser.start :chrome
@@ -64,7 +66,7 @@ end # of AT EXIT
 # WATIR START AND CONFIG 
 #///////////////////////////////////////////////////////////////////////////////////////////////////
 #$b = Watir::Browser.new :chrome
-$b.driver.manage.timeouts.implicit_wait = 1 #3 seconds
+#$b.driver.manage.timeouts.implicit_wait = 1 #3 seconds
 $baseURL= "http://rogerspos:be81f6@173.242.122.14/"
 $ss = Load.new	
 

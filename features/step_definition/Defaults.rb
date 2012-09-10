@@ -44,7 +44,7 @@ end
 
 When /^the "(.*?)" button in sales is selected$/ do |arg1|
 	@frame = $b.frame(:name => "content")
-	@frame.button(:text => /#{arg1}/).click
+	@frame.button(:text => /#{arg1}/).when_present.fire_event('onclick')
 end
 
 #///////////////////////////////////////////////////////////////////////////////////////////////////

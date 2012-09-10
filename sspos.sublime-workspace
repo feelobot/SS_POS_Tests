@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"te",
+				"text"
+			],
+			[
+				"fire",
+				"fire_event"
+			],
+			[
 				"arg",
 				"arg1"
 			],
@@ -139,15 +147,18 @@
 			"file": "features/step_definition/Sales/Checkout.rb",
 			"settings":
 			{
-				"buffer_size": 3336,
+				"buffer_size": 3421,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "When /^\\$ \"(.*?)\" \"(.*?)\" is added on payment screen$/ do |arg1, arg2|\n	@frame.text_field(:id => \"payment_amount\").when_present.set arg1\n	@frame.button(:text => /#{arg2}/)\n	warning = \"Successfully added $#{arg1} #{arg2} payment to sale\"\n	@frame.table(:id => \"payments\", :text => warning).wait_until_present(timeout=60)\n	@frame.button(:text => /Ring Out/).when_present.click\nend\n\nThen /^the tip for each stylist should be \\$ \"(.*?)\"$/ do |arg1|\n  @frame.button(:text => /Split Tips/).when_present.click\n  @frame.div(:id => \"tip_employees\").td(:index => 1).text == arg1\nend\n\nThen /^the multi\\-ticket sale is completed\\.$/ do\n  pending # express the regexp above with the code you wish you had\nend\nn",
 			"file": "features/step_definition/Sales/Payment.rb",
+			"file_size": 695,
+			"file_write_time": 1347052906000000,
 			"settings":
 			{
-				"buffer_size": 693,
+				"buffer_size": 696,
 				"line_ending": "Unix"
 			}
 		},
@@ -155,7 +166,7 @@
 			"file": "features/step_definition/Sales/TicketOptions.rb",
 			"settings":
 			{
-				"buffer_size": 1357,
+				"buffer_size": 1452,
 				"line_ending": "Unix"
 			}
 		},
@@ -171,7 +182,7 @@
 			"file": "features/step_definition/Sales/CustomerSearch.rb",
 			"settings":
 			{
-				"buffer_size": 3891,
+				"buffer_size": 3900,
 				"line_ending": "Unix"
 			}
 		},
@@ -235,7 +246,7 @@
 			"file": "features/support/env.rb",
 			"settings":
 			{
-				"buffer_size": 3492,
+				"buffer_size": 3528,
 				"line_ending": "Unix"
 			}
 		},
@@ -596,7 +607,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -604,15 +615,15 @@
 					"file": "features/step_definition/Sales/Checkout.rb",
 					"settings":
 					{
-						"buffer_size": 3336,
+						"buffer_size": 3421,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3216,
-								3216
+								2457,
+								2457
 							]
 						],
 						"settings":
@@ -635,15 +646,15 @@
 					"file": "features/step_definition/Sales/Payment.rb",
 					"settings":
 					{
-						"buffer_size": 693,
+						"buffer_size": 696,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								236,
-								236
+								696,
+								696
 							]
 						],
 						"settings":
@@ -664,15 +675,15 @@
 					"file": "features/step_definition/Sales/TicketOptions.rb",
 					"settings":
 					{
-						"buffer_size": 1357,
+						"buffer_size": 1452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								539,
-								539
+								1127,
+								1127
 							]
 						],
 						"settings":
@@ -684,7 +695,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 117.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -723,15 +734,15 @@
 					"file": "features/step_definition/Sales/CustomerSearch.rb",
 					"settings":
 					{
-						"buffer_size": 3891,
+						"buffer_size": 3900,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								425,
-								425
+								644,
+								644
 							]
 						],
 						"settings":
@@ -744,7 +755,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 936.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -798,8 +809,8 @@
 						"selection":
 						[
 							[
-								1636,
-								1636
+								1417,
+								1417
 							]
 						],
 						"settings":
@@ -812,7 +823,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 351.0,
+						"translation.y": 273.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -983,15 +994,15 @@
 					"file": "features/support/env.rb",
 					"settings":
 					{
-						"buffer_size": 3492,
+						"buffer_size": 3528,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2223,
-								2223
+								1473,
+								1473
 							]
 						],
 						"settings":
@@ -1004,7 +1015,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 312.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1027,8 +1038,8 @@
 						"selection":
 						[
 							[
-								169,
-								169
+								384,
+								384
 							]
 						],
 						"settings":
