@@ -25,7 +25,8 @@ Scenario: 004a Pre Select A Stylist as Request
 Scenario: 004b Preselect a Service from ticket options
     Given I am on the "Sales" tab 
     When the "New Ticket" button in sales is selected
-    And  I skip customer selection
+    And "Julio Rodriguez" is entered in customer search
+    When I select the customer "Julio Rodriguez" and hit next
     Then the Ticket Options window should appear
     When "Next Available" is set as the requested stylist
     And Adult Haircut service is selected in ticket options
@@ -40,7 +41,8 @@ Scenario: 004b Preselect a Service from ticket options
 
 Scenario: 004c Add multiple services to a sale 
     When the "New Ticket" button in sales is selected
-    And  I skip customer selection
+    And "Julio Rodriguez" is entered in customer search
+    When I select the customer "Julio Rodriguez" and hit next
     Then the Ticket Options window should appear
     When "Next Available" is set as the requested stylist
     And "Send to Waiting" is pushed from ticket options
@@ -56,7 +58,8 @@ Scenario: 004c Add multiple services to a sale
 
 Scenario: 004d Add multiple variable services to a sale 
     When the "New Ticket" button in sales is selected
-    And  I skip customer selection
+    And "Julio Rodriguez" is entered in customer search
+    When I select the customer "Julio Rodriguez" and hit next
     Then the Ticket Options window should appear
     When "Next Available" is set as the requested stylist
     And "Send to Waiting" is pushed from ticket options

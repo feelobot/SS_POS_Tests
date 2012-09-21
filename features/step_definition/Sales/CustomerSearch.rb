@@ -6,25 +6,20 @@
 
 
 And /^there exists a customer named "(.*?)"$/ do |arg1|
-  @frame.text_field(:xpath => "//td[2]/input[2]").wait_until_present
-  @frame .text_field(:xpath => "//td[2]/input[2]").set(arg1)
+  @frame .text_field(:xpath => "//td[2]/input[2]").when_present.set(arg1)
   @frame.button(:text => /#{arg1}/).wait_until_present
 end
 
 And /^"(.*?)" is entered in customer search$/ do |arg1|
-  @frame.text_field(:xpath => "//td[2]/input[2]").wait_until_present
-  sleep 1
-  @frame.text_field(:xpath => "//td[2]/input[2]").set(arg1)
+  @frame.text_field(:xpath => "//td[2]/input[2]").when_present.set(arg1)
 end
 
 Then /^the "(.*?)" message should appear$/ do |arg1|
-  @frame.div(:id => "customer_search_error_complete").wait_until_present
-  @frame.div(:id => "customer_search_error_complete").text == arg1
+  @frame.div(:id => "customer_search_error_complete").when_present.text == arg1
 end
 
 When /^"(.*?)" is selected in customer selection screen$/ do |arg1|
-  @frame.button(:text => /#{arg1}/).wait_until_present
-  @frame.button(:text => /#{arg1}/).fire_event('onclick')
+  @frame.button(:text => /#{arg1}/).when_present(timeout=45).fire_event('onclick')
 end
 
 Then /^the New Customer window should contain the following:$/ do |table|
@@ -37,8 +32,7 @@ Then /^the New Customer window should contain the following:$/ do |table|
 end
 
 And /^if "(.*?)" is entered for the zip code$/ do |arg1|
-  @frame.text_field(:id => "customer_zip").wait_until_present
-  @frame.text_field(:id => "customer_zip").set "#{arg1}"
+  @frame.text_field(:id => "customer_zip").when_present.set "#{arg1}"
   @frame.send_keys :tab
 end
 
@@ -54,10 +48,14 @@ And /^if the Save button is pushed in the new customer window$/ do
   @frame.button(:id => "newCustomer_done").when_present.fire_event('onclick')
 end
 
+And /^if the Save and Use button is pushed in the new customer window$/ do 
+  @frame.button(:id => "newCustomer_l").when_present.fire_event('onclick')
+end
+
 Then /^a mandatory gender requirement error should appear$/ do
   @frame.div(:text => "Error").wait_until_present
   @frame.li(:text => "Gender").wait_until_present
-  @frame.button(:id => /GenericAlert/).when_present(timeout=60).click
+  @frame.button(:id => /GenericAlert/).when_present(timeout=60).fire_event('onclick')
 end
 
 When /^the New Customer window is filled with the following:$/ do |table|
@@ -70,8 +68,7 @@ When /^the New Customer window is filled with the following:$/ do |table|
   @frame.text_field(:id => /#{results[3][0]}/).set "#{results[3][1]}"
   @frame.button(:id => "customer_sex_button").fire_event('onclick')
   @frame.div(:text => "Gender").wait_until_present
-  @frame.button(:text => "Male").wait_until_present
-  @frame.button(:text => "Male").fire_event('onclick')
+  @frame.button(:text => "Male").when_present.fire_event('onclick')
 end
 
 Then /^the customer should save without any errors$/ do
@@ -79,16 +76,17 @@ Then /^the customer should save without any errors$/ do
 end
 
 And /^"(.*?)" should be entered in the customer database$/ do |arg1|
-  @frame.button(:text => /#{arg1}/).wait_until_present
-  @frame.td(:text => /#{arg1}/).wait_until_present
+  @frame.button(:text => /#{arg1}/).wait_until_present(timeout=60)
+  @frame.td(:text => /#{arg1}/).wait_until_present(timeout=60)
 end
 
 When /^I select the customer "(.*?)" and hit next$/ do |arg1|
-  @frame.button(:text => /#{arg1}/).when_present.fire_event('onclick')
+  sleep 3
+  @frame.button(:text => /#{arg1}/).when_present(timeout=60).fire_event('onclick')
   @frame.td(:text => /#{arg1}/).wait_until_present
-  @frame.button(:id => "customer_popup_selector_done").fire_event('onclick')
+  @frame.button(:id => "customer_popup_selector_done").when_present.fire_event('onclick')
 end
 
 When /^I skip customer selection$/ do
-  @frame.button(:id => 'customer_popup_selector_5').when_present(timeout=60).fire_event('onclick')
+  @frame.button(:text => /Skip/).when_present(timeout=60).fire_event('onclick')
 end

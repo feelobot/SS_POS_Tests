@@ -38,7 +38,14 @@ Scenario: Merge 4 tickets on a multi-ticket
     And the ticket total is "$32.85"
     And I ringout the ticket
     And $ "50.00" "Cash" is added on payment screen
-    Then the tip for each stylist should be $ "0.00"
-    And the multi-ticket sale is completed.
+    Then the tip for "Sample Stylist 1" should be $ "0"
+    Then the tip for "Sample Stylist 2" should be $ "0.00"
+    Then the tip for "Sample Manager" should be $ "0.00"
+    And the Split Tips button is pushed
+    Then the tip for Sample Stylist 1 should be $ "5.72"
+    Then the tip for Sample Stylist 2 should be $ "5.72"
+    Then the tip for Sample Manager should be $ "5.71"
+    Then select continue on the tip screen
+    And the multi-ticket sale is completed
 
 And check if the database needs to be saved

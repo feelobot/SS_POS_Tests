@@ -12,7 +12,7 @@ Then /^the ticket color should be "(.*?)"$/ do |arg1|
 end
 
 When /^the ticket is pushed to "(.*?)" from waiting$/ do |arg1|
-  @frame.button(:title => /#{arg1}/).when_present.click
+  @frame.button(:title => /#{arg1}/).when_present(timeout=60).fire_event('onclick')
 end
 
 And /^"(.*?)" is set as the requested employee$/ do  |arg1|
@@ -22,42 +22,41 @@ And /^"(.*?)" is set as the requested employee$/ do  |arg1|
 end
 
 When /^the ticket is pushed to "(.*?)" from servicing$/ do |arg1|
-  @frame.th(:text => /0h 00m/).when_present.click
+  sleep 1
   @frame.button(:title => /#{arg1}/).when_present(timeout=60).fire_event('onclick')
 end
 
 Then /^the ticket should have a request on the checkout screen$/ do
-  @frame.td(:xpath => '//*[@id="trans_1"]/tbody/tr[1]/td[2]').when_present(timeout = 60).text == "Request"
+  @frame.div(:id => 'transactionDescription_1').when_present(timeout = 60).text == "Request"
+
 end
 
 Then /^"(.*?)" underneath the request$/ do |arg1|
-  @frame.div(:xpath => '//*[@id="trans_1"]/tbody/tr[2]/td/div') == /#{arg1}/
+  @frame.div(:id => 'commissionField_1') == /#{arg1}/
 end
 
 Then /^void the ticket$/ do 
-  @frame.button(:text => "Void").when_present.click
-  @frame.div(:text => "Void").wait_until_present
-  @frame.button(:text => "RSD Testing").when_present.click
-  @frame.td(:text => /Waiting/).wait_until_present
+  @frame.div(:class => "rounded singleTicket_editButtonContainer").when_present(timeout=60).fire_event('onclick')
+  @frame.button(:text => /Void Ticket/).when_present(timeout=60).fire_event('onclick')
+  @frame.button(:text => /RSD Testing/).when_present(timeout=60).fire_event('onclick')
+  @frame.td(:text => /Waiting/).wait_until_present(timeout=60)
+  sleep 2
 end
 
 When /^Adult Haircut service is selected for checkout$/ do 
-  @frame.button(:text => "Services").when_present.fire_event('onclick')
-  @frame.td(:xpath => '//*[@id="item_1"]/td').when_present.fire_event('onclick')
-  @frame.img(:xpath => '//*[@id="img_item_2667"]').when_present.fire_event('onclick')
-  @frame.td(:text => /Adult Haircut/).wait_until_present
-  @frame.button(:text => "Back").when_present.click
+  @frame.div(:id => "addItemActionMenu").button(:text => /Service/).when_present.fire_event('onclick')
+  @frame.button(:text => /Hair Cut/).when_present(timeout=60).fire_event('onclick')
+  @frame.button(:text => /Adult Haircut/).when_present.fire_event('onclick')
 end
 
 And /Shampoo & Style service is selected for checkout/ do 
-  @frame.td(:xpath => '//*[@id="item_4"]/td').when_present.fire_event('onclick')
-  @frame.img(:xpath => '//*[@id="img_item_2677"]').when_present.fire_event('onclick')
-  @frame.td(:text => /Shampoo & Style/).wait_until_present
-  @frame.button(:text => "Back").when_present.click
+  @frame.div(:id => "addItemActionMenu").button(:text => /Service/).when_present.fire_event('onclick')
+  @frame.button(:text => /Style/).when_present(timeout=60).fire_event('onclick')
+  @frame.button(:text => /Shampoo & Style/).when_present.fire_event('onclick')
 end
 
 Then /^"(.*?)" should appear under the item in checkout$/ do |arg1|
-  @frame.div(:text => "Commission: #{arg1}").wait_until_present
+  @frame.div(:text => /#{arg1}/).wait_until_present(timeout=60)
 end
 
 Then /^put the ticket on hold$/ do
@@ -66,19 +65,24 @@ Then /^put the ticket on hold$/ do
 end
 
 When /^all (\d+) holding tickets are added to the current ticket$/ do |arg1|
-  @frame.button(:text => /Add Ticket/).when_present.fire_event('onclick')
+  begin
+    @frame.button(:text => /Add Ticket/).when_present(timeout=60).fire_event('onclick')
+  rescue
+    sleep 2
+    @frame.button(:text => /Add Ticket/).when_present(timeout=60).fire_event('onclick')
+  end
   @frame.button(:text => /Felix Rodriguez/).when_present.fire_event('onclick')
-  @frame.th(:text => /Felix Rodriguez/).wait_until_present(timeout=60)
+  @frame.div(:text => /Felix Rodriguez/).wait_until_present(timeout=60)
   @frame.button(:text => /Add Ticket/).when_present.fire_event('onclick')
   @frame.button(:text => /Julio Rodriguez/).when_present.fire_event('onclick')
-  @frame.th(:text => /Julio Rodriguez/).wait_until_present(timeout=60)
+  @frame.div(:text => /Julio Rodriguez/).wait_until_present(timeout=60)
 end
 
 And /the ticket total is "(.*?)"/ do |arg1|
-  @frame.tr(:id => "totalRow").td(:text => "#{arg1}").wait_until_present
+  @frame.table(:id => "totalsTable").td(:text => "#{arg1}").wait_until_present
 end
 
 When /^I ringout the ticket$/ do
-  @frame.td(:id => "receipt_list").button(:xpath => '//*[@id="receipt_list"]/button[4]').when_present.fire_event('onclick')
+  @frame.button(:text => "Send to Payment").when_present.fire_event('onclick')
 end
 

@@ -39,6 +39,7 @@ Scenario: Clock in Stylist 1 as Stylist from button
 	And the clock in as "Stylist" button is pushed
 	Then "Current" time and "Clockin" time should match
 
+Scenario: Clock in Stylist 1 as Stylist from button
 	When I am on the "Timeclock" tab
     And the clock in as "Sample Stylist 2" button is pushed
     Then the "Sample Stylist 2" timecard should appear

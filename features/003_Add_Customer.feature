@@ -45,13 +45,12 @@ Scenario: Add another customer from autocomplete
     When the New Customer window is filled with the following:
 
     	|	middlename		|	A 					|
-	    |	address1		|	313 NE 48th St.		|
-	    |	address2		|	9549388184			|
-	    |	email			|	julio@email.com 	|
+	    |	address1		|	312 NW 49th St.		|
+	    |	address2		|	1234567891			|
+	    |	email			|	felix@email.com 	|
 	    |	gender 			| 	male 				|
 
-	And if the Save button is pushed in the new customer window
-	Then the customer should save without any errors
-	And "Felix Rodriguez" should be entered in the customer database
+	And if the Save and Use button is pushed in the new customer window
+	Then "Felix Rodriguez" customer name should be in ticket options
 
 And check if the database needs to be saved
