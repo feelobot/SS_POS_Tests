@@ -163,7 +163,7 @@
 			"file": "features/step_definition/Sales/Payment.rb",
 			"settings":
 			{
-				"buffer_size": 1024,
+				"buffer_size": 1040,
 				"line_ending": "Unix"
 			}
 		},
@@ -668,15 +668,15 @@
 					"file": "features/step_definition/Sales/Payment.rb",
 					"settings":
 					{
-						"buffer_size": 1024,
+						"buffer_size": 1040,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								657,
-								657
+								598,
+								598
 							]
 						],
 						"settings":
@@ -833,8 +833,8 @@
 						"selection":
 						[
 							[
-								1772,
-								1772
+								1969,
+								1969
 							]
 						],
 						"settings":
@@ -975,7 +975,7 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -990,8 +990,8 @@
 						"selection":
 						[
 							[
-								897,
-								897
+								1509,
+								1509
 							]
 						],
 						"settings":
@@ -1004,7 +1004,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 273.0,
+						"translation.y": 274.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1021,8 +1021,8 @@
 						"selection":
 						[
 							[
-								980,
-								980
+								907,
+								907
 							]
 						],
 						"settings":

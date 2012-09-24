@@ -9,8 +9,8 @@ end
 
 Then /^the tip for "(.*?)" should be \$ "(.*?)"$/ do |arg1,arg2|
 	begin
-  		@frame.td(:class => "active_input" , :index => 1, :text => arg2).wait_until_present
-      value = @frame.tr(:text => /#{arg1}/).td(:index => 1).text
+  		@frame.text_field(:class => "active_input" , :index => 1, :text => arg2).wait_until_present
+      value = @frame.text_field(:text => /#{arg1}/).td(:index => 1).text
   rescue "Actual Value: #{value}"
   end
 end
